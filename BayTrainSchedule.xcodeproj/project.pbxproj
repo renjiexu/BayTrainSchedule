@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A32F8F971AE0B7A10027142D /* NetworkUtil.m */; };
+		A33426E51ADE091500B263C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33426E41ADE091500B263C0 /* main.m */; };
+		A33426E81ADE091500B263C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33426E71ADE091500B263C0 /* AppDelegate.m */; };
+		A33426EB1ADE091600B263C0 /* BayTrains.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A33426E91ADE091600B263C0 /* BayTrains.xcdatamodeld */; };
+		A33426F11ADE091600B263C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33426EF1ADE091600B263C0 /* Main.storyboard */; };
+		A33426F31ADE091600B263C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33426F21ADE091600B263C0 /* Images.xcassets */; };
+		A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33426F41ADE091600B263C0 /* LaunchScreen.xib */; };
+		A33427021ADE091600B263C0 /* BayTrainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33427011ADE091600B263C0 /* BayTrainsTests.m */; };
+		A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FDD7A71ADE1FD70008E0CD /* categories.json */; };
+		A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */; };
+		A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */; };
+		A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */; };
+		A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7B11ADE1FD70008E0CD /* UIColor+HexString.m */; };
+		A3FDD7BF1ADE39360008E0CD /* BarTrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */; };
+		AEA2DB696D23E45041F8A5EC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26028C3E6CC0AE67847918DA /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A33426FC1ADE091600B263C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33426D71ADE091500B263C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A33426DE1ADE091500B263C0;
+			remoteInfo = BayTrains;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26028C3E6CC0AE67847918DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1EDFED16366352B1C0B5B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A32F8F961AE0B7A10027142D /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkUtil.h; path = Utils/NetworkUtil.h; sourceTree = "<group>"; };
+		A32F8F971AE0B7A10027142D /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkUtil.m; path = Utils/NetworkUtil.m; sourceTree = "<group>"; };
+		A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayTrainSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33426E31ADE091500B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A33426E41ADE091500B263C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A33426E61ADE091500B263C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A33426E71ADE091500B263C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A33426EA1ADE091600B263C0 /* BayTrains.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BayTrains.xcdatamodel; sourceTree = "<group>"; };
+		A33426F01ADE091600B263C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A33426F21ADE091600B263C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A33426F51ADE091600B263C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33427001ADE091600B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A33427011ADE091600B263C0 /* BayTrainsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainsTests.m; sourceTree = "<group>"; };
+		A3FDD7A71ADE1FD70008E0CD /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategory.h; sourceTree = "<group>"; };
+		A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategory.m; sourceTree = "<group>"; };
+		A3FDD7AC1ADE1FD70008E0CD /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewCell.h; sourceTree = "<group>"; };
+		A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewCell.m; sourceTree = "<group>"; };
+		A3FDD7AE1ADE1FD70008E0CD /* STTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewController.h; sourceTree = "<group>"; };
+		A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewController.m; sourceTree = "<group>"; };
+		A3FDD7B01ADE1FD70008E0CD /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		A3FDD7B11ADE1FD70008E0CD /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		A3FDD7BD1ADE39360008E0CD /* BarTrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarTrainViewController.h; path = Controllers/BarTrainViewController.h; sourceTree = "<group>"; };
+		A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarTrainViewController.m; path = Controllers/BarTrainViewController.m; sourceTree = "<group>"; };
+		A5E9FF02F49CAFB15A346CD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A33426DC1ADE091500B263C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA2DB696D23E45041F8A5EC /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33426F81ADE091600B263C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7129A045D4CEB92A65257302 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5E9FF02F49CAFB15A346CD7 /* Pods.debug.xcconfig */,
+				8E1EDFED16366352B1C0B5B8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A32F8F951AE0B76B0027142D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A32F8F961AE0B7A10027142D /* NetworkUtil.h */,
+				A32F8F971AE0B7A10027142D /* NetworkUtil.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		A33426D61ADE091500B263C0 = {
+			isa = PBXGroup;
+			children = (
+				A33426E11ADE091500B263C0 /* BayTrains */,
+				A33426FE1ADE091600B263C0 /* BayTrainsTests */,
+				A33426E01ADE091500B263C0 /* Products */,
+				7129A045D4CEB92A65257302 /* Pods */,
+				E64B6085203BE8842A2A114B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A33426E01ADE091500B263C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */,
+				A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A33426E11ADE091500B263C0 /* BayTrains */ = {
+			isa = PBXGroup;
+			children = (
+				A32F8F951AE0B76B0027142D /* Utils */,
+				A3FDD7BC1ADE24AE0008E0CD /* Libraries */,
+				A3FDD7BB1ADE24A20008E0CD /* Views */,
+				A3FDD7B91ADE24940008E0CD /* Controllers */,
+				A3FDD7B81ADE247F0008E0CD /* Application */,
+				A3FDD7A61ADE1FD70008E0CD /* Resources */,
+				A33426EF1ADE091600B263C0 /* Main.storyboard */,
+				A33426F21ADE091600B263C0 /* Images.xcassets */,
+				A33426F41ADE091600B263C0 /* LaunchScreen.xib */,
+				A33426E91ADE091600B263C0 /* BayTrains.xcdatamodeld */,
+				A33426E21ADE091500B263C0 /* Supporting Files */,
+			);
+			path = BayTrains;
+			sourceTree = "<group>";
+		};
+		A33426E21ADE091500B263C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33426E31ADE091500B263C0 /* Info.plist */,
+				A33426E41ADE091500B263C0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A33426FE1ADE091600B263C0 /* BayTrainsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A33427011ADE091600B263C0 /* BayTrainsTests.m */,
+				A33426FF1ADE091600B263C0 /* Supporting Files */,
+			);
+			path = BayTrainsTests;
+			sourceTree = "<group>";
+		};
+		A33426FF1ADE091600B263C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A33427001ADE091600B263C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3FDD7A51ADE1FD70008E0CD /* SvpplyTable */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */,
+				A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */,
+				A3FDD7AC1ADE1FD70008E0CD /* STTableViewCell.h */,
+				A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */,
+				A3FDD7AE1ADE1FD70008E0CD /* STTableViewController.h */,
+				A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */,
+				A3FDD7B01ADE1FD70008E0CD /* UIColor+HexString.h */,
+				A3FDD7B11ADE1FD70008E0CD /* UIColor+HexString.m */,
+			);
+			path = SvpplyTable;
+			sourceTree = "<group>";
+		};
+		A3FDD7A61ADE1FD70008E0CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD7A71ADE1FD70008E0CD /* categories.json */,
+			);
+			name = Resources;
+			path = SvpplyTable/Resources;
+			sourceTree = "<group>";
+		};
+		A3FDD7B81ADE247F0008E0CD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A33426E61ADE091500B263C0 /* AppDelegate.h */,
+				A33426E71ADE091500B263C0 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		A3FDD7B91ADE24940008E0CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD7BD1ADE39360008E0CD /* BarTrainViewController.h */,
+				A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A3FDD7BB1ADE24A20008E0CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A3FDD7BC1ADE24AE0008E0CD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD7A51ADE1FD70008E0CD /* SvpplyTable */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		E64B6085203BE8842A2A114B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26028C3E6CC0AE67847918DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A33426DE1ADE091500B263C0 /* BayTrainSchedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainSchedule" */;
+			buildPhases = (
+				6668A7C852EC0AB57A1C9CD4 /* Check Pods Manifest.lock */,
+				A33426DB1ADE091500B263C0 /* Sources */,
+				A33426DC1ADE091500B263C0 /* Frameworks */,
+				A33426DD1ADE091500B263C0 /* Resources */,
+				315C69557B34F811BE26B57D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BayTrainSchedule;
+			productName = BayTrains;
+			productReference = A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A33426FA1ADE091600B263C0 /* BayTrainScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainScheduleTests" */;
+			buildPhases = (
+				A33426F71ADE091600B263C0 /* Sources */,
+				A33426F81ADE091600B263C0 /* Frameworks */,
+				A33426F91ADE091600B263C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A33426FD1ADE091600B263C0 /* PBXTargetDependency */,
+			);
+			name = BayTrainScheduleTests;
+			productName = BayTrainsTests;
+			productReference = A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A33426D71ADE091500B263C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Renjie Xu";
+				TargetAttributes = {
+					A33426DE1ADE091500B263C0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7482UYDKFN;
+					};
+					A33426FA1ADE091600B263C0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A33426DE1ADE091500B263C0;
+					};
+				};
+			};
+			buildConfigurationList = A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrainSchedule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A33426D61ADE091500B263C0;
+			productRefGroup = A33426E01ADE091500B263C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A33426DE1ADE091500B263C0 /* BayTrainSchedule */,
+				A33426FA1ADE091600B263C0 /* BayTrainScheduleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A33426DD1ADE091500B263C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33426F11ADE091600B263C0 /* Main.storyboard in Resources */,
+				A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */,
+				A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */,
+				A33426F31ADE091600B263C0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33426F91ADE091600B263C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		315C69557B34F811BE26B57D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6668A7C852EC0AB57A1C9CD4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A33426DB1ADE091500B263C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */,
+				A33426E81ADE091500B263C0 /* AppDelegate.m in Sources */,
+				A33426E51ADE091500B263C0 /* main.m in Sources */,
+				A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */,
+				A33426EB1ADE091600B263C0 /* BayTrains.xcdatamodeld in Sources */,
+				A3FDD7BF1ADE39360008E0CD /* BarTrainViewController.m in Sources */,
+				A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */,
+				A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */,
+				A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33426F71ADE091600B263C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33427021ADE091600B263C0 /* BayTrainsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A33426FD1ADE091600B263C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A33426DE1ADE091500B263C0 /* BayTrainSchedule */;
+			targetProxy = A33426FC1ADE091600B263C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A33426EF1ADE091600B263C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33426F01ADE091600B263C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A33426F41ADE091600B263C0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A33426F51ADE091600B263C0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A33427031ADE091600B263C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A33427041ADE091600B263C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A33427061ADE091600B263C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E9FF02F49CAFB15A346CD7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
+				INFOPLIST_FILE = BayTrains/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BayTrainSchedule;
+			};
+			name = Debug;
+		};
+		A33427071ADE091600B263C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E1EDFED16366352B1C0B5B8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
+				INFOPLIST_FILE = BayTrains/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BayTrainSchedule;
+			};
+			name = Release;
+		};
+		A33427091ADE091600B263C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BayTrainsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BayTrainScheduleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrains.app/BayTrains";
+			};
+			name = Debug;
+		};
+		A334270A1ADE091600B263C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BayTrainsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BayTrainScheduleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrains.app/BayTrains";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrainSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33427031ADE091600B263C0 /* Debug */,
+				A33427041ADE091600B263C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainSchedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33427061ADE091600B263C0 /* Debug */,
+				A33427071ADE091600B263C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33427091ADE091600B263C0 /* Debug */,
+				A334270A1ADE091600B263C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A33426E91ADE091600B263C0 /* BayTrains.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A33426EA1ADE091600B263C0 /* BayTrains.xcdatamodel */,
+			);
+			currentVersion = A33426EA1ADE091600B263C0 /* BayTrains.xcdatamodel */;
+			path = BayTrains.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A33426D71ADE091500B263C0 /* Project object */;
+}
