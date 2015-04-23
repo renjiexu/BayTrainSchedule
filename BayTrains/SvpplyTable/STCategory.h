@@ -13,14 +13,12 @@
   NSString* name;
 	NSString* URLString;
 	NSString* colorHex;
-	NSString* borderColorHex;
 }
 
-@property(strong, nonatomic) NSString* borderColorHex;
 @property(strong, nonatomic) NSString* colorHex;
 @property(strong, nonatomic) NSString* URLString;
 @property(strong, nonatomic) NSString* name;
 
--(id)initWithJSON:(id)json;
+-(id)initWithJSON:(id)json :(NSString *)textColor;
 
 @end

@@ -52,6 +52,25 @@ typedef enum
   [self.tableView reloadData];
 }
 
++ (NSArray *)getTextColors {
+    static NSArray *_textColors;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _textColors = @[
+                    @"#FF5B54",
+                    @"#8A4E77",
+                    @"#36779D",
+                    @"#56B2BD",
+                    @"#ffe800",
+                    @"#6ABC8B",
+                    @"#d43e19",
+                    @"#68DDAB",
+                    @"#666F7E"
+        ];
+    });
+    return _textColors;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -271,21 +290,21 @@ typedef enum
 }
 
 - (void) loadDataFromLocalJSON {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"categories" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    [self parseJSON:[[[jsonDict objectForKey:@"response"] objectForKey:@"categories"] objectAtIndex:0]];
+    [self parseJSON:[jsonDict objectForKey:@"data"]];
 }
 
 - (NSInteger)parseJSON:(NSDictionary *)jsonDict {
-    return [self parseJSON:jsonDict backIndex:-1];
+    return [self parseJSON:jsonDict backIndex:-1 colorIndex:0];
 }
 
-- (NSInteger)parseJSON:(NSDictionary*)jsonDict backIndex:(NSInteger)backIndex
-{
+- (NSInteger)parseJSON:(NSDictionary*)jsonDict backIndex:(NSInteger)backIndex colorIndex:(NSInteger)colorIndex {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    STCategory *category = [[STCategory alloc]initWithJSON:jsonDict];
+    STCategory *category = [[STCategory alloc] initWithJSON:jsonDict
+                                                           :[[self.class getTextColors] objectAtIndex:colorIndex]];
     [self.categories addObject:category];
   
     NSInteger currentIndex = [self.categories indexOfObject:category];
@@ -293,7 +312,8 @@ typedef enum
     NSMutableArray *jsonArray = [jsonDict objectForKey:@"children"];
     if (jsonArray && jsonArray.count > 0) {
         for (NSDictionary *jsonCategoryDict in jsonArray) {
-            [array addObject: [NSString stringWithFormat:@"%d", (int)[self parseJSON:jsonCategoryDict backIndex:currentIndex]]];
+            colorIndex = (colorIndex + 1) % [[self.class getTextColors] count];
+            [array addObject: [NSString stringWithFormat:@"%d", (int)[self parseJSON:jsonCategoryDict backIndex:currentIndex colorIndex:colorIndex]]];
         }
     }
     [dict setObject:[NSString stringWithFormat:@"%d", (int)backIndex] forKey:@"backIndex"];

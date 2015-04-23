@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3207BC71AE77C0600275096 /* AcerailTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3207BC61AE77C0600275096 /* AcerailTrain.m */; };
 		A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A32F8F971AE0B7A10027142D /* NetworkUtil.m */; };
 		A33426E51ADE091500B263C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A33426E41ADE091500B263C0 /* main.m */; };
 		A33426E81ADE091500B263C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A33426E71ADE091500B263C0 /* AppDelegate.m */; };
@@ -14,7 +15,9 @@
 		A33426F11ADE091600B263C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33426EF1ADE091600B263C0 /* Main.storyboard */; };
 		A33426F31ADE091600B263C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33426F21ADE091600B263C0 /* Images.xcassets */; };
 		A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33426F41ADE091600B263C0 /* LaunchScreen.xib */; };
-		A33427021ADE091600B263C0 /* BayTrainsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33427011ADE091600B263C0 /* BayTrainsTests.m */; };
+		A33427021ADE091600B263C0 /* BayTrainScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */; };
+		A3DEFF0A1AE4835E00FE5564 /* acerail.json in Resources */ = {isa = PBXBuildFile; fileRef = A3DEFF091AE4835E00FE5564 /* acerail.json */; };
+		A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */; };
 		A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FDD7A71ADE1FD70008E0CD /* categories.json */; };
 		A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */; };
 		A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */; };
@@ -37,6 +40,8 @@
 /* Begin PBXFileReference section */
 		26028C3E6CC0AE67847918DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1EDFED16366352B1C0B5B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A3207BC51AE77C0600275096 /* AcerailTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcerailTrain.h; path = Models/trains/AcerailTrain.h; sourceTree = "<group>"; };
+		A3207BC61AE77C0600275096 /* AcerailTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcerailTrain.m; path = Models/trains/AcerailTrain.m; sourceTree = "<group>"; };
 		A32F8F961AE0B7A10027142D /* NetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkUtil.h; path = Utils/NetworkUtil.h; sourceTree = "<group>"; };
 		A32F8F971AE0B7A10027142D /* NetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkUtil.m; path = Utils/NetworkUtil.m; sourceTree = "<group>"; };
 		A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayTrainSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +55,10 @@
 		A33426F51ADE091600B263C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33427001ADE091600B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A33427011ADE091600B263C0 /* BayTrainsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainsTests.m; sourceTree = "<group>"; };
+		A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainScheduleTests.m; sourceTree = "<group>"; };
+		A3DEFF091AE4835E00FE5564 /* acerail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = acerail.json; sourceTree = "<group>"; };
+		A3E37B961AE8C4F2005F0BE7 /* AmtrakTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmtrakTrain.h; path = Models/trains/AmtrakTrain.h; sourceTree = "<group>"; };
+		A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AmtrakTrain.m; path = Models/trains/AmtrakTrain.m; sourceTree = "<group>"; };
 		A3FDD7A71ADE1FD70008E0CD /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategory.h; sourceTree = "<group>"; };
 		A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategory.m; sourceTree = "<group>"; };
@@ -93,6 +101,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A3207BC31AE77B9200275096 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3207BC41AE77BA300275096 /* trains */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A3207BC41AE77BA300275096 /* trains */ = {
+			isa = PBXGroup;
+			children = (
+				A3207BC51AE77C0600275096 /* AcerailTrain.h */,
+				A3207BC61AE77C0600275096 /* AcerailTrain.m */,
+				A3E37B961AE8C4F2005F0BE7 /* AmtrakTrain.h */,
+				A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */,
+			);
+			name = trains;
+			sourceTree = "<group>";
+		};
 		A32F8F951AE0B76B0027142D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +132,8 @@
 		A33426D61ADE091500B263C0 = {
 			isa = PBXGroup;
 			children = (
-				A33426E11ADE091500B263C0 /* BayTrains */,
-				A33426FE1ADE091600B263C0 /* BayTrainsTests */,
+				A33426E11ADE091500B263C0 /* BayTrainSchedule */,
+				A33426FE1ADE091600B263C0 /* BayTrainSchdeuleTests */,
 				A33426E01ADE091500B263C0 /* Products */,
 				7129A045D4CEB92A65257302 /* Pods */,
 				E64B6085203BE8842A2A114B /* Frameworks */,
@@ -122,9 +149,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A33426E11ADE091500B263C0 /* BayTrains */ = {
+		A33426E11ADE091500B263C0 /* BayTrainSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				A3207BC31AE77B9200275096 /* Models */,
 				A32F8F951AE0B76B0027142D /* Utils */,
 				A3FDD7BC1ADE24AE0008E0CD /* Libraries */,
 				A3FDD7BB1ADE24A20008E0CD /* Views */,
@@ -137,6 +165,7 @@
 				A33426E91ADE091600B263C0 /* BayTrains.xcdatamodeld */,
 				A33426E21ADE091500B263C0 /* Supporting Files */,
 			);
+			name = BayTrainSchedule;
 			path = BayTrains;
 			sourceTree = "<group>";
 		};
@@ -149,12 +178,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A33426FE1ADE091600B263C0 /* BayTrainsTests */ = {
+		A33426FE1ADE091600B263C0 /* BayTrainSchdeuleTests */ = {
 			isa = PBXGroup;
 			children = (
-				A33427011ADE091600B263C0 /* BayTrainsTests.m */,
+				A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */,
 				A33426FF1ADE091600B263C0 /* Supporting Files */,
 			);
+			name = BayTrainSchdeuleTests;
 			path = BayTrainsTests;
 			sourceTree = "<group>";
 		};
@@ -185,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				A3FDD7A71ADE1FD70008E0CD /* categories.json */,
+				A3DEFF091AE4835E00FE5564 /* acerail.json */,
 			);
 			name = Resources;
 			path = SvpplyTable/Resources;
@@ -315,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33426F11ADE091600B263C0 /* Main.storyboard in Resources */,
+				A3DEFF0A1AE4835E00FE5564 /* acerail.json in Resources */,
 				A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */,
 				A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */,
 				A33426F31ADE091600B263C0 /* Images.xcassets in Resources */,
@@ -371,11 +403,13 @@
 				A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */,
 				A33426E81ADE091500B263C0 /* AppDelegate.m in Sources */,
 				A33426E51ADE091500B263C0 /* main.m in Sources */,
+				A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */,
 				A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */,
 				A33426EB1ADE091600B263C0 /* BayTrains.xcdatamodeld in Sources */,
 				A3FDD7BF1ADE39360008E0CD /* BarTrainViewController.m in Sources */,
 				A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */,
 				A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */,
+				A3207BC71AE77C0600275096 /* AcerailTrain.m in Sources */,
 				A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33427021ADE091600B263C0 /* BayTrainsTests.m in Sources */,
+				A33427021ADE091600B263C0 /* BayTrainScheduleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +577,7 @@
 				INFOPLIST_FILE = BayTrainsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = BayTrainScheduleTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrains.app/BayTrains";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrainSchedule.app/BayTrainSchedule";
 			};
 			name = Debug;
 		};
@@ -558,7 +592,7 @@
 				INFOPLIST_FILE = BayTrainsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = BayTrainScheduleTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrains.app/BayTrains";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrainSchedule.app/BayTrainSchedule";
 			};
 			name = Release;
 		};

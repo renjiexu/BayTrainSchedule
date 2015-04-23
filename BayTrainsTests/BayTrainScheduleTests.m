@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface BayTrainsTests : XCTestCase
+@interface BayTrainScheduleTests: XCTestCase
 
 @end
 
-@implementation BayTrainsTests
+@implementation BayTrainScheduleTests
 
 - (void)setUp {
     [super setUp];

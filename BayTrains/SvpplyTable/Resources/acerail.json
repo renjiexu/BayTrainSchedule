@@ -1,1 +1,357 @@
-{"name":"Acerail","directions":[{"direction":"westbound","schedules":[{"name":"Ace1","stops":[{"name":"Stockton","time":"4:20AM"},{"name":"Lathrop / Manteca","time":"4:39AM"},{"name":"Tracy","time":"4:51AM"},{"name":"Vasco","time":"5:20AM"},{"name":"Livermore","time":"5:25AM"},{"name":"Pleasanton","time":"5:33AM"},{"name":"Fremont","time":"5:55AM"},{"name":"Great AMerica","time":"6:13AM"},{"name":"Santa Clara","time":"6:20AM"},{"name":"San Jose","time":"6:32AM"}]},{"name":"Ace3","stops":[{"name":"Stockton","time":"5:35AM"},{"name":"Lathrop / Manteca","time":"5:54AM"},{"name":"Tracy","time":"6:06AM"},{"name":"Vasco","time":"6:35AM"},{"name":"Livermore","time":"6:40AM"},{"name":"Pleasanton","time":"6:48AM"},{"name":"Fremont","time":"7:10AM"},{"name":"Great AMerica","time":"7:28AM"},{"name":"Santa Clara","time":"7:35AM"},{"name":"San Jose","time":"7:47AM"}]},{"name":"Ace5","stops":[{"name":"Stockton","time":"6:40AM"},{"name":"Lathrop / Manteca","time":"6:59AM"},{"name":"Tracy","time":"7:11AM"},{"name":"Vasco","time":"7:40AM"},{"name":"Livermore","time":"7:45AM"},{"name":"Pleasanton","time":"7:53AM"},{"name":"Fremont","time":"8:15AM"},{"name":"Great AMerica","time":"8:33AM"},{"name":"Santa Clara","time":"8:40AM"},{"name":"San Jose","time":"8:52AM"}]},{"name":"Ace7","stops":[{"name":"Stockton","time":"7:05AM"},{"name":"Lathrop / Manteca","time":"7:24AM"},{"name":"Tracy","time":"7:36AM"},{"name":"Vasco","time":"8:05AM"},{"name":"Livermore","time":"8:10AM"},{"name":"Pleasanton","time":"8:18AM"},{"name":"Fremont","time":"8:40AM"},{"name":"Great AMerica","time":"8:58AM"},{"name":"Santa Clara","time":"9:05AM"},{"name":"San Jose","time":"9:17AM"}]},{"name":"Ace3","stops":[{"name":"Stockton","time":"5:35AM"},{"name":"Lathrop / Manteca","time":"5:54AM"},{"name":"Tracy","time":"6:06AM"},{"name":"Vasco","time":"6:35AM"},{"name":"Livermore","time":"6:40AM"},{"name":"Pleasanton","time":"6:48AM"},{"name":"Fremont","time":"7:10AM"},{"name":"Great AMerica","time":"7:28AM"},{"name":"Santa Clara","time":"7:35AM"},{"name":"San Jose","time":"7:47AM"}]},{"name":"Ace3","stops":[{"name":"Stockton","time":"5:35AM"},{"name":"Lathrop / Manteca","time":"5:54AM"},{"name":"Tracy","time":"6:06AM"},{"name":"Vasco","time":"6:35AM"},{"name":"Livermore","time":"6:40AM"},{"name":"Pleasanton","time":"6:48AM"},{"name":"Fremont","time":"7:10AM"},{"name":"Great AMerica","time":"7:28AM"},{"name":"Santa Clara","time":"7:35AM"},{"name":"San Jose","time":"7:47AM"}]},{"name":"Ace3","stops":[{"name":"Stockton","time":"5:35AM"},{"name":"Lathrop / Manteca","time":"5:54AM"},{"name":"Tracy","time":"6:06AM"},{"name":"Vasco","time":"6:35AM"},{"name":"Livermore","time":"6:40AM"},{"name":"Pleasanton","time":"6:48AM"},{"name":"Fremont","time":"7:10AM"},{"name":"Great AMerica","time":"7:28AM"},{"name":"Santa Clara","time":"7:35AM"},{"name":"San Jose","time":"7:47AM"}]}]},{"direction":"eastbound","scheules":[{"name":"Ace4","stops":[{"name":"San Jose","time":"3:35PM"},{"name":"Santa Clara","time":"3:40PM"},{"name":"Great America","time":"3:49PM"},{"name":"Fremont","time":"4:05PM"},{"name":"Pleasanton","time":"4:28PM"},{"name":"Livermore","time":"4:37PM"},{"name":"Vasco","time":"4:42PM"},{"name":"Tracy","time":"5:11PM"},{"name":"Lathrop / Manteca","time":"5:23PM"},{"name":"Stockton","time":"5:47PM"}]},{"name":"Ace6","stops":[{"name":"San Jose","time":"4:35PM"},{"name":"Santa Clara","time":"4:40PM"},{"name":"Great America","time":"4:49PM"},{"name":"Fremont","time":"5:05PM"},{"name":"Pleasanton","time":"5:28PM"},{"name":"Livermore","time":"5:37PM"},{"name":"Vasco","time":"5:42PM"},{"name":"Tracy","time":"6:11PM"},{"name":"Lathrop / Manteca","time":"6:23PM"},{"name":"Stockton","time":"6:47PM"}]},{"name":"Ace8","stops":[{"name":"San Jose","time":"5:35PM"},{"name":"Santa Clara","time":"5:40PM"},{"name":"Great America","time":"5:49PM"},{"name":"Fremont","time":"6:05PM"},{"name":"Pleasanton","time":"6:28PM"},{"name":"Livermore","time":"6:37PM"},{"name":"Vasco","time":"6:42PM"},{"name":"Tracy","time":"7:11PM"},{"name":"Lathrop / Manteca","time":"7:23PM"},{"name":"Stockton","time":"7:47PM"}]},{"name":"Ace10","stops":[{"name":"San Jose","time":"6:38PM"},{"name":"Santa Clara","time":"6:43PM"},{"name":"Great America","time":"6:52PM"},{"name":"Fremont","time":"7:08PM"},{"name":"Pleasanton","time":"7:31PM"},{"name":"Livermore","time":"7:40PM"},{"name":"Vasco","time":"7:45PM"},{"name":"Tracy","time":"8:14PM"},{"name":"Lathrop / Manteca","time":"8:26PM"},{"name":"Stockton","time":"8:50PM"}]}]}]}
+{
+    "data": {
+        "name": "Acerail",
+        "children": [
+                     {
+                     "name": "Westbound(Stockton -> San Jose)",
+                     "children": [
+                                  {
+                                  "name": "Stockton",
+                                  "children": [
+                                               {
+                                               "name": "4:20AM"
+                                               },
+                                               {
+                                               "name": "5:35AM"
+                                               },
+                                               {
+                                               "name": "6:40AM"
+                                               },
+                                               {
+                                               "name": "7:05AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Lathrop / Manteca",
+                                  "children": [
+                                               {
+                                               "name": "4:39AM"
+                                               },
+                                               {
+                                               "name": "5:54AM"
+                                               },
+                                               {
+                                               "name": "6:59AM"
+                                               },
+                                               {
+                                               "name": "7:24AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Tracy",
+                                  "children": [
+                                               {
+                                               "name": "4:51AM"
+                                               },
+                                               {
+                                               "name": "6:06AM"
+                                               },
+                                               {
+                                               "name": "7:11AM"
+                                               },
+                                               {
+                                               "name": "7:36AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Vasco",
+                                  "children": [
+                                               {
+                                               "name": "5:20AM"
+                                               },
+                                               {
+                                               "name": "6:35AM"
+                                               },
+                                               {
+                                               "name": "7:40AM"
+                                               },
+                                               {
+                                               "name": "8:05AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Livermore",
+                                  "children": [
+                                               {
+                                               "name": "5:25AM"
+                                               },
+                                               {
+                                               "name": "6:40AM"
+                                               },
+                                               {
+                                               "name": "7:45AM"
+                                               },
+                                               {
+                                               "name": "8:10AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Pleasanton",
+                                  "children": [
+                                               {
+                                               "name": "5:33AM"
+                                               },
+                                               {
+                                               "name": "6:48AM"
+                                               },
+                                               {
+                                               "name": "7:53AM"
+                                               },
+                                               {
+                                               "name": "8:18AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Fremont",
+                                  "children": [
+                                               {
+                                               "name": "5:55AM"
+                                               },
+                                               {
+                                               "name": "7:10AM"
+                                               },
+                                               {
+                                               "name": "8:15AM"
+                                               },
+                                               {
+                                               "name": "8:40AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Great America",
+                                  "children": [
+                                               {
+                                               "name": "6:13AM"
+                                               },
+                                               {
+                                               "name": "7:28AM"
+                                               },
+                                               {
+                                               "name": "8:33AM"
+                                               },
+                                               {
+                                               "name": "8:58AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Santa Clara",
+                                  "children": [
+                                               {
+                                               "name": "6:20AM"
+                                               },
+                                               {
+                                               "name": "7:35AM"
+                                               },
+                                               {
+                                               "name": "8:40AM"
+                                               },
+                                               {
+                                               "name": "9:05AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "San Jose",
+                                  "children": [
+                                               {
+                                               "name": "6:32AM"
+                                               },
+                                               {
+                                               "name": "7:47AM"
+                                               },
+                                               {
+                                               "name": "8:52AM"
+                                               },
+                                               {
+                                               "name": "9:17AM"
+                                               }
+                                               ]
+                                  }
+                                  ]
+                     },
+                     {
+                     "name": "Eastbound(San Jose -> Stockton)",
+                     "children": [
+                                  {
+                                  "name": "San Jose",
+                                  "children": [
+                                               {
+                                               "name": "3:35PM"
+                                               },
+                                               {
+                                               "name": "4:35PM"
+                                               },
+                                               {
+                                               "name": "5:35PM"
+                                               },
+                                               {
+                                               "name": "6:38PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Santa Clara",
+                                  "children": [
+                                               {
+                                               "name": "3:40PM"
+                                               },
+                                               {
+                                               "name": "4:40PM"
+                                               },
+                                               {
+                                               "name": "5:40PM"
+                                               },
+                                               {
+                                               "name": "6:43PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Great America",
+                                  "children": [
+                                               {
+                                               "name": "3:49PM"
+                                               },
+                                               {
+                                               "name": "4:49PM"
+                                               },
+                                               {
+                                               "name": "5:49PM"
+                                               },
+                                               {
+                                               "name": "6:52PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Fremont",
+                                  "children": [
+                                               {
+                                               "name": "4:05PM"
+                                               },
+                                               {
+                                               "name": "5:05PM"
+                                               },
+                                               {
+                                               "name": "6:05PM"
+                                               },
+                                               {
+                                               "name": "7:08PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Pleasanton",
+                                  "children": [
+                                               {
+                                               "name": "4:28PM"
+                                               },
+                                               {
+                                               "name": "5:28PM"
+                                               },
+                                               {
+                                               "name": "6:28PM"
+                                               },
+                                               {
+                                               "name": "7:31PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Livermore",
+                                  "children": [
+                                               {
+                                               "name": "4:37PM"
+                                               },
+                                               {
+                                               "name": "5:37PM"
+                                               },
+                                               {
+                                               "name": "6:37PM"
+                                               },
+                                               {
+                                               "name": "7:40PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Vasco",
+                                  "children": [
+                                               {
+                                               "name": "4:42PM"
+                                               },
+                                               {
+                                               "name": "5:42PM"
+                                               },
+                                               {
+                                               "name": "6:42PM"
+                                               },
+                                               {
+                                               "name": "7:45PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Tracy",
+                                  "children": [
+                                               {
+                                               "name": "5:11PM"
+                                               },
+                                               {
+                                               "name": "6:11PM"
+                                               },
+                                               {
+                                               "name": "7:11PM"
+                                               },
+                                               {
+                                               "name": "8:14PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Lathrop / Manteca",
+                                  "children": [
+                                               {
+                                               "name": "5:23PM"
+                                               },
+                                               {
+                                               "name": "6:23PM"
+                                               },
+                                               {
+                                               "name": "7:23PM"
+                                               },
+                                               {
+                                               "name": "8:26PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Stockton",
+                                  "children": [
+                                               {
+                                               "name": "5:47PM"
+                                               },
+                                               {
+                                               "name": "6:47PM"
+                                               },
+                                               {
+                                               "name": "7:47PM"
+                                               },
+                                               {
+                                               "name": "8:50PM"
+                                               }
+                                               ]
+                                  }
+                                  ]
+                     }
+                     ]
+    }
+}

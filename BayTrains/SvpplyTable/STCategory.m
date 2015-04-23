@@ -10,19 +10,17 @@
 
 @implementation STCategory
 
-@synthesize name, URLString, colorHex, borderColorHex;
+@synthesize name, URLString, colorHex;
 
--(id)initWithJSON:(id)json
-{
-  NSDictionary *jsonDict = (NSDictionary *)json;
-  self = [super init];
-  if (self) {
-    self.name = [jsonDict objectForKey:@"name"];
-    self.URLString = [jsonDict objectForKey:@"url"];
-    self.colorHex = [jsonDict objectForKey:@"text_color"];
-    self.borderColorHex = [jsonDict objectForKey:@"border_color"];
-  }
-  return self;
+-(id)initWithJSON:(id)json :(NSString *)textColor {
+    NSDictionary *jsonDict = (NSDictionary *)json;
+    self = [super init];
+    if (self) {
+        self.name = [jsonDict objectForKey:@"name"];
+        self.URLString = [jsonDict objectForKey:@"url"];
+        self.colorHex = textColor;
+    }
+    return self;
 }
 
 @end
