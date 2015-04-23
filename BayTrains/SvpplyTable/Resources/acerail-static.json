@@ -3,7 +3,7 @@
         "name": "Acerail",
         "children": [
                      {
-                     "name": "Westbound(Stockton -> San Jose)",
+                     "name": "Westbound",
                      "children": [
                                   {
                                   "name": "Stockton",
@@ -178,7 +178,7 @@
                                   ]
                      },
                      {
-                     "name": "Eastbound(San Jose -> Stockton)",
+                     "name": "Eastbound",
                      "children": [
                                   {
                                   "name": "San Jose",

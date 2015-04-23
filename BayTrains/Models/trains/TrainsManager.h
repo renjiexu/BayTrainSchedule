@@ -1,5 +1,5 @@
 //
-//  AmtrakTrain.h
+//  TrainsManager.h
 //  BayTrainSchedule
 //
 //  Created by Renjie Xu on 4/22/15.
@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AmtrakTrain : NSObject
+@interface TrainsManager : NSObject
 
-+(NSDictionary *)getSchedule;
++(instancetype)getInstance;
+
+-(NSDictionary *)getAllTrainSchedules;
 
 @end

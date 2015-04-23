@@ -6,15 +6,16 @@
 //  Copyright (c) 2015 Renjie Xu. All rights reserved.
 //
 
-#import "BarTrainViewController.h"
+#import "BayTrainViewController.h"
+#import "TrainsManager.h"
 
-@interface BarTrainViewController ()
+@interface BayTrainViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation BarTrainViewController
+@implementation BayTrainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,7 +39,9 @@
     [super viewWillAppear:animated];
 }
 
-- (void) loadData:(bool)local {
+- (void)loadData {
+    NSDictionary* allSchedules = [[TrainsManager getInstance] getAllTrainSchedules];
+    [super parseJSON:allSchedules];
 }
 
 @end

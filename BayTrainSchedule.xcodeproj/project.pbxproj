@@ -16,14 +16,16 @@
 		A33426F31ADE091600B263C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33426F21ADE091600B263C0 /* Images.xcassets */; };
 		A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33426F41ADE091600B263C0 /* LaunchScreen.xib */; };
 		A33427021ADE091600B263C0 /* BayTrainScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */; };
-		A3DEFF0A1AE4835E00FE5564 /* acerail.json in Resources */ = {isa = PBXBuildFile; fileRef = A3DEFF091AE4835E00FE5564 /* acerail.json */; };
+		A3DEFF0A1AE4835E00FE5564 /* acerail-static.json in Resources */ = {isa = PBXBuildFile; fileRef = A3DEFF091AE4835E00FE5564 /* acerail-static.json */; };
 		A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */; };
+		A3E37B9A1AE8CD53005F0BE7 /* amtrak-static.json in Resources */ = {isa = PBXBuildFile; fileRef = A3E37B991AE8CD53005F0BE7 /* amtrak-static.json */; };
+		A3E37B9D1AE8CE42005F0BE7 /* TrainsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E37B9C1AE8CE42005F0BE7 /* TrainsManager.m */; };
 		A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FDD7A71ADE1FD70008E0CD /* categories.json */; };
 		A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */; };
 		A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */; };
 		A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */; };
 		A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7B11ADE1FD70008E0CD /* UIColor+HexString.m */; };
-		A3FDD7BF1ADE39360008E0CD /* BarTrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */; };
+		A3FDD7BF1ADE39360008E0CD /* BayTrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7BE1ADE39360008E0CD /* BayTrainViewController.m */; };
 		AEA2DB696D23E45041F8A5EC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26028C3E6CC0AE67847918DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,9 +58,12 @@
 		A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33427001ADE091600B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainScheduleTests.m; sourceTree = "<group>"; };
-		A3DEFF091AE4835E00FE5564 /* acerail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = acerail.json; sourceTree = "<group>"; };
+		A3DEFF091AE4835E00FE5564 /* acerail-static.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "acerail-static.json"; sourceTree = "<group>"; };
 		A3E37B961AE8C4F2005F0BE7 /* AmtrakTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmtrakTrain.h; path = Models/trains/AmtrakTrain.h; sourceTree = "<group>"; };
 		A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AmtrakTrain.m; path = Models/trains/AmtrakTrain.m; sourceTree = "<group>"; };
+		A3E37B991AE8CD53005F0BE7 /* amtrak-static.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "amtrak-static.json"; sourceTree = "<group>"; };
+		A3E37B9B1AE8CE42005F0BE7 /* TrainsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainsManager.h; path = Models/trains/TrainsManager.h; sourceTree = "<group>"; };
+		A3E37B9C1AE8CE42005F0BE7 /* TrainsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainsManager.m; path = Models/trains/TrainsManager.m; sourceTree = "<group>"; };
 		A3FDD7A71ADE1FD70008E0CD /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategory.h; sourceTree = "<group>"; };
 		A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategory.m; sourceTree = "<group>"; };
@@ -68,8 +73,8 @@
 		A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTableViewController.m; sourceTree = "<group>"; };
 		A3FDD7B01ADE1FD70008E0CD /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		A3FDD7B11ADE1FD70008E0CD /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
-		A3FDD7BD1ADE39360008E0CD /* BarTrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarTrainViewController.h; path = Controllers/BarTrainViewController.h; sourceTree = "<group>"; };
-		A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarTrainViewController.m; path = Controllers/BarTrainViewController.m; sourceTree = "<group>"; };
+		A3FDD7BD1ADE39360008E0CD /* BayTrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BayTrainViewController.h; path = Controllers/BayTrainViewController.h; sourceTree = "<group>"; };
+		A3FDD7BE1ADE39360008E0CD /* BayTrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BayTrainViewController.m; path = Controllers/BayTrainViewController.m; sourceTree = "<group>"; };
 		A5E9FF02F49CAFB15A346CD7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +121,8 @@
 				A3207BC61AE77C0600275096 /* AcerailTrain.m */,
 				A3E37B961AE8C4F2005F0BE7 /* AmtrakTrain.h */,
 				A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */,
+				A3E37B9B1AE8CE42005F0BE7 /* TrainsManager.h */,
+				A3E37B9C1AE8CE42005F0BE7 /* TrainsManager.m */,
 			);
 			name = trains;
 			sourceTree = "<group>";
@@ -215,7 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				A3FDD7A71ADE1FD70008E0CD /* categories.json */,
-				A3DEFF091AE4835E00FE5564 /* acerail.json */,
+				A3DEFF091AE4835E00FE5564 /* acerail-static.json */,
+				A3E37B991AE8CD53005F0BE7 /* amtrak-static.json */,
 			);
 			name = Resources;
 			path = SvpplyTable/Resources;
@@ -233,8 +241,8 @@
 		A3FDD7B91ADE24940008E0CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A3FDD7BD1ADE39360008E0CD /* BarTrainViewController.h */,
-				A3FDD7BE1ADE39360008E0CD /* BarTrainViewController.m */,
+				A3FDD7BD1ADE39360008E0CD /* BayTrainViewController.h */,
+				A3FDD7BE1ADE39360008E0CD /* BayTrainViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -346,7 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33426F11ADE091600B263C0 /* Main.storyboard in Resources */,
-				A3DEFF0A1AE4835E00FE5564 /* acerail.json in Resources */,
+				A3E37B9A1AE8CD53005F0BE7 /* amtrak-static.json in Resources */,
+				A3DEFF0A1AE4835E00FE5564 /* acerail-static.json in Resources */,
 				A3FDD7B21ADE1FD70008E0CD /* categories.json in Resources */,
 				A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */,
 				A33426F31ADE091600B263C0 /* Images.xcassets in Resources */,
@@ -406,10 +415,11 @@
 				A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */,
 				A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */,
 				A33426EB1ADE091600B263C0 /* BayTrains.xcdatamodeld in Sources */,
-				A3FDD7BF1ADE39360008E0CD /* BarTrainViewController.m in Sources */,
+				A3FDD7BF1ADE39360008E0CD /* BayTrainViewController.m in Sources */,
 				A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */,
 				A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */,
 				A3207BC71AE77C0600275096 /* AcerailTrain.m in Sources */,
+				A3E37B9D1AE8CE42005F0BE7 /* TrainsManager.m in Sources */,
 				A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

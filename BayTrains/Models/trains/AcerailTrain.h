@@ -10,6 +10,6 @@
 
 @interface AcerailTrain : NSObject
 
-+(NSDictionary *)loadStaticSchedule;
++(NSDictionary *)getSchedule;
 
 @end

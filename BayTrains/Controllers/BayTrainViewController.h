@@ -8,6 +8,6 @@
 
 #import "STTableViewController.h"
 
-@interface BarTrainViewController : STTableViewController
+@interface BayTrainViewController : STTableViewController
 
 @end

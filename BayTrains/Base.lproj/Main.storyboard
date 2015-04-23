@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Bar Train View Controller-->
+        <!--Bay Train View Controller-->
         <scene sceneID="uW8-gU-sOx">
             <objects>
-                <tableViewController id="CCM-Iy-FrX" customClass="BarTrainViewController" sceneMemberID="viewController">
+                <tableViewController id="CCM-Iy-FrX" customClass="BayTrainViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bz5-5Y-LFi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

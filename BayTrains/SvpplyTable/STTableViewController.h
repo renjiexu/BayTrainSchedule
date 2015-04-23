@@ -15,6 +15,8 @@
   UITableViewDelegate
 >
 
-- (void)loadData:(bool)local;
+- (void)loadData;
+
+- (NSInteger)parseJSON:(NSDictionary *)jsonDict;
 
 @end

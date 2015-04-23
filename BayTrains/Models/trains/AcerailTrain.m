@@ -10,8 +10,8 @@
 
 @implementation AcerailTrain
 
-+(NSDictionary *)loadStaticSchedule {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
++(NSDictionary *)getSchedule {
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail-static" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];

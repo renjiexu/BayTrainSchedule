@@ -46,7 +46,7 @@ typedef enum
   [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
   [self.tableView setBackgroundColor:[UIColor blackColor]];
 
-  [self loadDataFromLocalJSON];
+  [self loadData];
   _selectedCategorySection = -1;
   [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
   [self.tableView reloadData];
@@ -280,17 +280,12 @@ typedef enum
 
 #pragma mark - Load Data Methods
 
-- (void)loadData:(bool)local {
-    if (local) {
-        [self loadDataFromLocalJSON];
-    }
-    else {
-        NSLog(@"not load from local, do nothing in parent");
-    }
+- (void)loadData {
+    [self loadDataFromLocalJSON];
 }
 
 - (void) loadDataFromLocalJSON {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail-static" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];

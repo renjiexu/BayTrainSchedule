@@ -1,0 +1,65 @@
+{
+    "data": {
+        "name": "Amtrak",
+        "children": [
+                     {
+                     "name": "Weekday Westbound",
+                     "children": [
+                                  {
+                                  "name": "Sacramento",
+                                  "children": [
+                                               {
+                                               "name": "4:30AM"
+                                               },
+                                               {
+                                               "name": "5:30AM"
+                                               },
+                                               {
+                                               "name": "6:20AM"
+                                               },
+                                               {
+                                               "name": "7:00AM"
+                                               },
+                                               {
+                                               "name": "7:40AM"
+                                               },
+                                               {
+                                               "name": "8:20AM"
+                                               },
+                                               {
+                                               "name": "9:20AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Davis",
+                                  "children": [
+                                               {
+                                               "name": "4:45AM"
+                                               },
+                                               {
+                                               "name": "5:45AM"
+                                               },
+                                               {
+                                               "name": "6:35AM"
+                                               },
+                                               {
+                                               "name": "7:15AM"
+                                               },
+                                               {
+                                               "name": "7:55AM"
+                                               },
+                                               {
+                                               "name": "8:35AM"
+                                               },
+                                               {
+                                               "name": "9:35AM"
+                                               }
+                                               ]
+                                  }
+                                  ]
+                     },
+                     {}
+                     ]
+    }
+}
