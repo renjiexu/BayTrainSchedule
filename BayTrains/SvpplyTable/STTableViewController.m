@@ -36,9 +36,7 @@ typedef enum
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.categories = [[NSMutableArray alloc] init];
-  self.structure = [[NSMutableDictionary alloc] init];
-  self.displayedChildren = [[NSMutableArray alloc] init];
+    [self reset];
   
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
   self.tableView.dataSource = self;
@@ -47,8 +45,6 @@ typedef enum
   [self.tableView setBackgroundColor:[UIColor blackColor]];
 
   [self loadData];
-  _selectedCategorySection = -1;
-  [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
   [self.tableView reloadData];
 }
 
@@ -293,7 +289,17 @@ typedef enum
 }
 
 - (NSInteger)parseJSON:(NSDictionary *)jsonDict {
-    return [self parseJSON:jsonDict backIndex:-1 colorIndex:0];
+    [self reset];
+    [self parseJSON:jsonDict backIndex:-1 colorIndex:0];
+    _selectedCategorySection = -1;
+    [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
+    return -1;
+}
+
+- (void)reset {
+    self.categories = [[NSMutableArray alloc] init];
+    self.structure = [[NSMutableDictionary alloc] init];
+    self.displayedChildren = [[NSMutableArray alloc] init];
 }
 
 - (NSInteger)parseJSON:(NSDictionary*)jsonDict backIndex:(NSInteger)backIndex colorIndex:(NSInteger)colorIndex {

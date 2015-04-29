@@ -56,10 +56,320 @@
                                                "name": "9:35AM"
                                                }
                                                ]
+                                  },
+                                  {
+                                  "name": "Suisun-Fairfield",
+                                  "children": [
+                                               {
+                                               "name": "5:09AM"
+                                               },
+                                               {
+                                               "name": "6:09AM"
+                                               },
+                                               {
+                                               "name": "6:59AM"
+                                               },
+                                               {
+                                               "name": "7:39AM"
+                                               },
+                                               {
+                                               "name": "8:19AM"
+                                               },
+                                               {
+                                               "name": "8:59AM"
+                                               },
+                                               {
+                                               "name": "9:59AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Martinez",
+                                  "children": [
+                                               {
+                                               "name": "5:30AM"
+                                               },
+                                               {
+                                               "name": "6:30AM"
+                                               },
+                                               {
+                                               "name": "7:20AM"
+                                               },
+                                               {
+                                               "name": "8:00AM"
+                                               },
+                                               {
+                                               "name": "8:40AM"
+                                               },
+                                               {
+                                               "name": "9:20AM"
+                                               },
+                                               {
+                                               "name": "10:20AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Richmond",
+                                  "children": [
+                                               {
+                                               "name": "5:55AM"
+                                               },
+                                               {
+                                               "name": "6:55AM"
+                                               },
+                                               {
+                                               "name": "7:45AM"
+                                               },
+                                               {
+                                               "name": "8:25AM"
+                                               },
+                                               {
+                                               "name": "9:05AM"
+                                               },
+                                               {
+                                               "name": "9:45AM"
+                                               },
+                                               {
+                                               "name": "10:45AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Berkeley",
+                                  "children": [
+                                               {
+                                               "name": "6:02AM"
+                                               },
+                                               {
+                                               "name": "7:02AM"
+                                               },
+                                               {
+                                               "name": "7:52AM"
+                                               },
+                                               {
+                                               "name": "8:32AM"
+                                               },
+                                               {
+                                               "name": "9:12AM"
+                                               },
+                                               {
+                                               "name": "9:52AM"
+                                               },
+                                               {
+                                               "name": "10:52AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Emeryville",
+                                  "children": [
+                                               {
+                                               "name": "6:08AM"
+                                               },
+                                               {
+                                               "name": "7:08AM"
+                                               },
+                                               {
+                                               "name": "7:58AM"
+                                               },
+                                               {
+                                               "name": "8:38AM"
+                                               },
+                                               {
+                                               "name": "9:18AM"
+                                               },
+                                               {
+                                               "name": "9:58AM"
+                                               },
+                                               {
+                                               "name": "10:58AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Oakland",
+                                  "children": [
+                                               {
+                                               "name": "6:21AM"
+                                               },
+                                               {
+                                               "name": "7:21AM"
+                                               },
+                                               {
+                                               "name": "8:18AM"
+                                               },
+                                               {
+                                               "name": "8:51AM"
+                                               },
+                                               {
+                                               "name": "9:38AM"
+                                               },
+                                               {
+                                               "name": "10:18AM"
+                                               },
+                                               {
+                                               "name": "11:18AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Oakland Coliseum",
+                                  "children": [
+                                               {
+                                               "name": "6:32AM"
+                                               },
+                                               {
+                                               "name": "7:32AM"
+                                               },
+                                               {
+                                               "name": "8:25AM"
+                                               },
+                                               {
+                                               "name": "9:02AM"
+                                               },
+                                               {
+                                               "name": "10:25AM"
+                                               },
+                                               {
+                                               "name": "11:25AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Hayward",
+                                  "children": [
+                                               {
+                                               "name": "6:43AM"
+                                               },
+                                               {
+                                               "name": "7:43AM"
+                                               },
+                                               {
+                                               "name": "9:13AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Fremont-Centerville",
+                                  "children": [
+                                               {
+                                               "name": "6:59AM"
+                                               },
+                                               {
+                                               "name": "7:59AM"
+                                               },
+                                               {
+                                               "name": "9:29AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Santa Clara-Great America",
+                                  "children": [
+                                               {
+                                               "name": "7:16AM"
+                                               },
+                                               {
+                                               "name": "8:16AM"
+                                               },
+                                               {
+                                               "name": "9:46AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Santa Clara-University Station",
+                                  "children": [
+                                               {
+                                               "name": "7:24AM"
+                                               },
+                                               {
+                                               "name": "8:24AM"
+                                               },
+                                               {
+                                               "name": "9:54AM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "San Jose",
+                                  "children": [
+                                               {
+                                               "name": "7:38AM"
+                                               },
+                                               {
+                                               "name": "8:38AM"
+                                               },
+                                               {
+                                               "name": "10:13AM"
+                                               }
+                                               ]
                                   }
                                   ]
                      },
-                     {}
+                     {
+                     "name": "Weekday Eastbound",
+                     "children": [
+                                  {
+                                  "name": "San Jose",
+                                  "children": [
+                                               {
+                                               "name": "6:40AM"
+                                               },
+                                               {
+                                               "name": "9:05AM"
+                                               },
+                                               {
+                                               "name": "12:20PM"
+                                               }
+                                               ]
+                                  },
+                                  {
+                                  "name": "Santa Clara-University Station",
+                                  "children": [
+                                               {
+                                               "name": "6:46AM"
+                                               },
+                                               {
+                                               "name": "9:11AM"
+                                               },
+                                               {
+                                               "name": "12:26PM"
+                                               }
+                                               ]
+                                  }
+                                  ]
+                     }
                      ]
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CCM-Iy-FrX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m9D-B6-byF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Bay Train View Controller-->
+        <!--BayTrainSchedule-->
         <scene sceneID="uW8-gU-sOx">
             <objects>
                 <tableViewController id="CCM-Iy-FrX" customClass="BayTrainViewController" sceneMemberID="viewController">
@@ -28,13 +28,32 @@
                             <outlet property="delegate" destination="CCM-Iy-FrX" id="zeQ-oN-QTT"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="BayTrainSchedule" id="w9b-90-9C5"/>
                     <connections>
                         <outlet property="tableView" destination="Bz5-5Y-LFi" id="816-6Z-atH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hts-1T-ivy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="369"/>
+            <point key="canvasLocation" x="998" y="376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tZj-mG-agU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m9D-B6-byF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BVM-Cw-CM2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CCM-Iy-FrX" kind="relationship" relationship="rootViewController" id="tbK-iP-XiL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngJ-4O-oMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="376"/>
         </scene>
     </scenes>
 </document>

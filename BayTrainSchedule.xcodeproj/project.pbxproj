@@ -16,6 +16,7 @@
 		A33426F31ADE091600B263C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33426F21ADE091600B263C0 /* Images.xcassets */; };
 		A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A33426F41ADE091600B263C0 /* LaunchScreen.xib */; };
 		A33427021ADE091600B263C0 /* BayTrainScheduleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */; };
+		A3C6382A1AEDB63A00267DBD /* ConstantVars.h in Sources */ = {isa = PBXBuildFile; fileRef = A3C638291AEDB63A00267DBD /* ConstantVars.h */; };
 		A3DEFF0A1AE4835E00FE5564 /* acerail-static.json in Resources */ = {isa = PBXBuildFile; fileRef = A3DEFF091AE4835E00FE5564 /* acerail-static.json */; };
 		A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */; };
 		A3E37B9A1AE8CD53005F0BE7 /* amtrak-static.json in Resources */ = {isa = PBXBuildFile; fileRef = A3E37B991AE8CD53005F0BE7 /* amtrak-static.json */; };
@@ -58,6 +59,8 @@
 		A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33427001ADE091600B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainScheduleTests.m; sourceTree = "<group>"; };
+		A3C638281AEDB2F900267DBD /* TrainProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainProtocol.h; path = Models/trains/TrainProtocol.h; sourceTree = "<group>"; };
+		A3C638291AEDB63A00267DBD /* ConstantVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConstantVars.h; path = Utils/ConstantVars.h; sourceTree = "<group>"; };
 		A3DEFF091AE4835E00FE5564 /* acerail-static.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "acerail-static.json"; sourceTree = "<group>"; };
 		A3E37B961AE8C4F2005F0BE7 /* AmtrakTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AmtrakTrain.h; path = Models/trains/AmtrakTrain.h; sourceTree = "<group>"; };
 		A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AmtrakTrain.m; path = Models/trains/AmtrakTrain.m; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 				A3E37B971AE8C4F2005F0BE7 /* AmtrakTrain.m */,
 				A3E37B9B1AE8CE42005F0BE7 /* TrainsManager.h */,
 				A3E37B9C1AE8CE42005F0BE7 /* TrainsManager.m */,
+				A3C638281AEDB2F900267DBD /* TrainProtocol.h */,
 			);
 			name = trains;
 			sourceTree = "<group>";
@@ -132,6 +136,7 @@
 			children = (
 				A32F8F961AE0B7A10027142D /* NetworkUtil.h */,
 				A32F8F971AE0B7A10027142D /* NetworkUtil.m */,
+				A3C638291AEDB63A00267DBD /* ConstantVars.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				A3207BC71AE77C0600275096 /* AcerailTrain.m in Sources */,
 				A3E37B9D1AE8CE42005F0BE7 /* TrainsManager.m in Sources */,
 				A32F8F981AE0B7A10027142D /* NetworkUtil.m in Sources */,
+				A3C6382A1AEDB63A00267DBD /* ConstantVars.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

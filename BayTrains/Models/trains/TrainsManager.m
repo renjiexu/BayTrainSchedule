@@ -21,11 +21,11 @@
     return sharedInstance;
 }
 
--(NSDictionary *)getAllTrainSchedules {
+-(NSDictionary *)getAllTrainSchedules:(BOOL)staticOnly {
     NSDictionary *allTrainsScheduleDict = [[NSMutableDictionary alloc] init];
     NSArray *schedulesArray = [[NSMutableArray alloc] initWithObjects:
-                               [AcerailTrain getSchedule],
-                               [AmtrakTrain getSchedule],
+                               [[AcerailTrain getInstance] getSchedule:staticOnly],
+                               [[AmtrakTrain getInstance] getSchedule:staticOnly],
                                nil];
     [allTrainsScheduleDict setValue:@"All Trains" forKey:@"name"];
     [allTrainsScheduleDict setValue:schedulesArray forKey:@"children"];

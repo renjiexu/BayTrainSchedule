@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TrainProtocol.h"
 
-@interface AcerailTrain : NSObject
+@interface AcerailTrain : NSObject<TrainProtocol>
 
-+(NSDictionary *)getSchedule;
++(instancetype)getInstance;
 
 @end

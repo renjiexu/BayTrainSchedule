@@ -8,6 +8,7 @@
 
 #import "BayTrainViewController.h"
 #import "TrainsManager.h"
+#import "ConstantVars.h"
 
 @interface BayTrainViewController ()
 
@@ -28,19 +29,25 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    /*
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
-        CGRect viewBounds = [self.view bounds];
-        viewBounds.origin.y = 18;
-        viewBounds.size.height = viewBounds.size.height - 18;
-        self.tableView.frame = viewBounds;
-    }
-    */
     [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:REFRESH_SCHEDULE
+                                                      object:nil
+                                                    queue:nil
+                                                usingBlock:^(NSNotification *note) {
+                                                    dispatch_async(dispatch_get_main_queue(), ^{
+                                                        [self loadData:YES];
+                                                        [self.tableView reloadData];
+                                                    });
+                                                }];
 }
 
 - (void)loadData {
-    NSDictionary* allSchedules = [[TrainsManager getInstance] getAllTrainSchedules];
+    [self loadData:NO];
+}
+
+- (void)loadData:(BOOL)staticOnly {
+    NSDictionary* allSchedules = [[TrainsManager getInstance] getAllTrainSchedules:staticOnly];
     [super parseJSON:allSchedules];
 }
 

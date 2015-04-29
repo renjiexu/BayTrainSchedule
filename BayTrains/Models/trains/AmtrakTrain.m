@@ -10,7 +10,16 @@
 
 @implementation AmtrakTrain
 
-+(NSDictionary *)getSchedule {
++(instancetype) getInstance {
+    static dispatch_once_t once;
+    static id sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+-(NSDictionary *)getSchedule:(BOOL)staticOnly {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"amtrak-static" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;

@@ -12,6 +12,6 @@
 
 +(instancetype)getInstance;
 
--(NSDictionary *)getAllTrainSchedules;
+-(NSDictionary *)getAllTrainSchedules:(BOOL)staticOnly;
 
 @end

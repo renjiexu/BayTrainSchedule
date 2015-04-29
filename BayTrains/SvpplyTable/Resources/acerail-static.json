@@ -7,171 +7,221 @@
                      "children": [
                                   {
                                   "name": "Stockton",
+                                  "stopID": 150,
                                   "children": [
                                                {
-                                               "name": "4:20AM"
+                                               "name": "4:20AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "5:35AM"
+                                               "name": "5:35AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "6:40AM"
+                                               "name": "6:40AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "7:05AM"
+                                               "name": "7:05AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Lathrop / Manteca",
+                                  "stopID": 151,
                                   "children": [
                                                {
-                                               "name": "4:39AM"
+                                               "name": "4:39AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "5:54AM"
+                                               "name": "5:54AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "6:59AM"
+                                               "name": "6:59AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "7:24AM"
+                                               "name": "7:24AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Tracy",
+                                  "stopID": 152,
                                   "children": [
                                                {
-                                               "name": "4:51AM"
+                                               "name": "4:51AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "6:06AM"
+                                               "name": "6:06AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "7:11AM"
+                                               "name": "7:11AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "7:36AM"
+                                               "name": "7:36AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Vasco",
+                                  "stopID": 153,
                                   "children": [
                                                {
-                                               "name": "5:20AM"
+                                               "name": "5:20AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "6:35AM"
+                                               "name": "6:35AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "7:40AM"
+                                               "name": "7:40AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "8:05AM"
+                                               "name": "8:05AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Livermore",
+                                  "stopID": 154,
                                   "children": [
                                                {
-                                               "name": "5:25AM"
+                                               "name": "5:25AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "6:40AM"
+                                               "name": "6:40AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "7:45AM"
+                                               "name": "7:45AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "8:10AM"
+                                               "name": "8:10AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Pleasanton",
+                                  "stopID": 155,
                                   "children": [
                                                {
-                                               "name": "5:33AM"
+                                               "name": "5:33AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "6:48AM"
+                                               "name": "6:48AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "7:53AM"
+                                               "name": "7:53AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "8:18AM"
+                                               "name": "8:18AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Fremont",
+                                  "stopID": 156,
                                   "children": [
                                                {
-                                               "name": "5:55AM"
+                                               "name": "5:55AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "7:10AM"
+                                               "name": "7:10AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "8:15AM"
+                                               "name": "8:15AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "8:40AM"
+                                               "name": "8:40AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Great America",
+                                  "stopID": 157,
                                   "children": [
                                                {
-                                               "name": "6:13AM"
+                                               "name": "6:13AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "7:28AM"
+                                               "name": "7:28AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "8:33AM"
+                                               "name": "8:33AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "8:58AM"
+                                               "name": "8:58AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Santa Clara",
+                                  "stopID": 158,
                                   "children": [
                                                {
-                                               "name": "6:20AM"
+                                               "name": "6:20AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "7:35AM"
+                                               "name": "7:35AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "8:40AM"
+                                               "name": "8:40AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "9:05AM"
+                                               "name": "9:05AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "San Jose",
+                                  "stopID": 159,
                                   "children": [
                                                {
-                                               "name": "6:32AM"
+                                               "name": "6:32AM",
+                                               "trainNo": "01"
                                                },
                                                {
-                                               "name": "7:47AM"
+                                               "name": "7:47AM",
+                                               "trainNo": "03"
                                                },
                                                {
-                                               "name": "8:52AM"
+                                               "name": "8:52AM",
+                                               "trainNo": "05"
                                                },
                                                {
-                                               "name": "9:17AM"
+                                               "name": "9:17AM",
+                                               "trainNo": "07"
                                                }
                                                ]
                                   }
@@ -182,171 +232,221 @@
                      "children": [
                                   {
                                   "name": "San Jose",
+                                  "stopID": 159,
                                   "children": [
                                                {
-                                               "name": "3:35PM"
+                                               "name": "3:35PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "4:35PM"
+                                               "name": "4:35PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "5:35PM"
+                                               "name": "5:35PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "6:38PM"
+                                               "name": "6:38PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Santa Clara",
+                                  "stopID": 158,
                                   "children": [
                                                {
-                                               "name": "3:40PM"
+                                               "name": "3:40PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "4:40PM"
+                                               "name": "4:40PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "5:40PM"
+                                               "name": "5:40PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "6:43PM"
+                                               "name": "6:43PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Great America",
+                                  "stopID": 157,
                                   "children": [
                                                {
-                                               "name": "3:49PM"
+                                               "name": "3:49PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "4:49PM"
+                                               "name": "4:49PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "5:49PM"
+                                               "name": "5:49PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "6:52PM"
+                                               "name": "6:52PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Fremont",
+                                  "stopID": 156,
                                   "children": [
                                                {
-                                               "name": "4:05PM"
+                                               "name": "4:05PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "5:05PM"
+                                               "name": "5:05PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "6:05PM"
+                                               "name": "6:05PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "7:08PM"
+                                               "name": "7:08PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Pleasanton",
+                                  "stopID": 155,
                                   "children": [
                                                {
-                                               "name": "4:28PM"
+                                               "name": "4:28PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "5:28PM"
+                                               "name": "5:28PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "6:28PM"
+                                               "name": "6:28PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "7:31PM"
+                                               "name": "7:31PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Livermore",
+                                  "stopID": 154,
                                   "children": [
                                                {
-                                               "name": "4:37PM"
+                                               "name": "4:37PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "5:37PM"
+                                               "name": "5:37PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "6:37PM"
+                                               "name": "6:37PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "7:40PM"
+                                               "name": "7:40PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Vasco",
+                                  "stopID": 153,
                                   "children": [
                                                {
-                                               "name": "4:42PM"
+                                               "name": "4:42PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "5:42PM"
+                                               "name": "5:42PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "6:42PM"
+                                               "name": "6:42PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "7:45PM"
+                                               "name": "7:45PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Tracy",
+                                  "stopID": 152,
                                   "children": [
                                                {
-                                               "name": "5:11PM"
+                                               "name": "5:11PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "6:11PM"
+                                               "name": "6:11PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "7:11PM"
+                                               "name": "7:11PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "8:14PM"
+                                               "name": "8:14PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Lathrop / Manteca",
+                                  "stopID": 151,
                                   "children": [
                                                {
-                                               "name": "5:23PM"
+                                               "name": "5:23PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "6:23PM"
+                                               "name": "6:23PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "7:23PM"
+                                               "name": "7:23PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "8:26PM"
+                                               "name": "8:26PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   },
                                   {
                                   "name": "Stockton",
+                                  "stopID": 150,
                                   "children": [
                                                {
-                                               "name": "5:47PM"
+                                               "name": "5:47PM",
+                                               "trainNo": "04"
                                                },
                                                {
-                                               "name": "6:47PM"
+                                               "name": "6:47PM",
+                                               "trainNo": "06"
                                                },
                                                {
-                                               "name": "7:47PM"
+                                               "name": "7:47PM",
+                                               "trainNo": "08"
                                                },
                                                {
-                                               "name": "8:50PM"
+                                               "name": "8:50PM",
+                                               "trainNo": "10"
                                                }
                                                ]
                                   }
