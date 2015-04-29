@@ -9,6 +9,7 @@
 #import "BayTrainViewController.h"
 #import "TrainsManager.h"
 #import "ConstantVars.h"
+#import "MJRefresh.h"
 
 @interface BayTrainViewController ()
 
@@ -31,6 +32,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self configurePullDownRefresh];
+    
     [[NSNotificationCenter defaultCenter] addObserverForName:REFRESH_SCHEDULE
                                                       object:nil
                                                     queue:nil
@@ -42,8 +45,23 @@
                                                 }];
 }
 
+- (void)configurePullDownRefresh {
+    [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(pullDownRefresh)];
+    [self.tableView.header setTitle:@"Pull down to refresh" forState:MJRefreshHeaderStateIdle];
+    [self.tableView.header setTitle:@"Release to refresh" forState:MJRefreshHeaderStatePulling];
+    [self.tableView.header setTitle:@"Loading ..." forState:MJRefreshHeaderStateRefreshing];
+    self.tableView.header.updatedTimeHidden = YES;
+}
+
 - (void)loadData {
     [self loadData:NO];
+}
+
+- (void)pullDownRefresh {
+    NSLog(@"refresh...");
+    [self loadData:NO];
+    [self.tableView reloadData];
+    [self.tableView.legendHeader endRefreshing];
 }
 
 - (void)loadData:(BOOL)staticOnly {

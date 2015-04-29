@@ -289,10 +289,16 @@ typedef enum
 }
 
 - (NSInteger)parseJSON:(NSDictionary *)jsonDict {
+    NSMutableArray* backupDisplayedChildren = [self.displayedChildren mutableCopy];
     [self reset];
     [self parseJSON:jsonDict backIndex:-1 colorIndex:0];
-    _selectedCategorySection = -1;
-    [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
+    if ([backupDisplayedChildren count] != 0) {
+        self.displayedChildren = backupDisplayedChildren;
+    }
+    else {
+        _selectedCategorySection = -1;
+        [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
+    }
     return -1;
 }
 
