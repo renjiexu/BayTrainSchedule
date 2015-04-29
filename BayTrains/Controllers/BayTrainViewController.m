@@ -32,6 +32,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    self.navigationController.navigationBar.barTintColor = [UIColor grayColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     [self configurePullDownRefresh];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:REFRESH_SCHEDULE
@@ -58,7 +60,6 @@
 }
 
 - (void)pullDownRefresh {
-    NSLog(@"refresh...");
     [self loadData:NO];
     [self.tableView reloadData];
     [self.tableView.legendHeader endRefreshing];

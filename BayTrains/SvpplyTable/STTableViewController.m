@@ -281,7 +281,7 @@ typedef enum
 }
 
 - (void) loadDataFromLocalJSON {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail-static" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];

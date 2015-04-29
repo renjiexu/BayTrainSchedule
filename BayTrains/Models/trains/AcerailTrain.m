@@ -10,11 +10,11 @@
 #import "AFHTTPSessionManager.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "ConstantVars.h"
+#import "NSObject+Category.h"
 
 
 @interface AcerailTrain()
 @property NSMutableDictionary *staticSchedule;
-@property NSMutableDictionary *liveSchedule;
 @property NSMutableDictionary *mergedSchedule;
 @end
 
@@ -41,7 +41,7 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
 
 -(NSDictionary *)getStaticSchedule {
     if (!self.staticSchedule) {
-        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail-static" ofType:@"json"];
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
         NSError *error = nil;
         NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
@@ -54,7 +54,7 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
 -(void)refreshLiveSchedule {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:ACERAIL_LIVE_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *transformedSchedule = [self transformJSONFormats:responseObject];
+        NSDictionary *transformedSchedule = [self extractLiveScheduleFromLiveResponse:responseObject];
         [self merge:self.staticSchedule :transformedSchedule];
         [[NSNotificationCenter defaultCenter] postNotificationName:REFRESH_SCHEDULE object:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -62,7 +62,7 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
     }];
 }
 
--(NSDictionary *)transformJSONFormats:(NSDictionary*)response {
+-(NSDictionary *)extractLiveScheduleFromLiveResponse:(NSDictionary*)response {
     if (response == nil) {
         return nil;
     }
@@ -112,42 +112,6 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
         }
     }
     return self.mergedSchedule;
-}
-
--(id)deepMutableCopy:(id)source
-{
-    if ([source isKindOfClass:[NSArray class]]) {
-        NSArray *oldArray = (NSArray *)source;
-        NSMutableArray *newArray = [NSMutableArray array];
-        for (id obj in oldArray) {
-            [newArray addObject:[self deepMutableCopy:obj]];
-        }
-        return newArray;
-    } else if ([source isKindOfClass:[NSDictionary class]]) {
-        NSDictionary *oldDict = source;
-        NSMutableDictionary *newDict = [NSMutableDictionary dictionary];
-        for (id obj in oldDict) {
-            [newDict setObject:[self deepMutableCopy:oldDict[obj]] forKey:obj];
-        }
-        return newDict;
-    } else if ([source isKindOfClass:[NSSet class]]) {
-        NSSet *oldSet = (NSSet *)source;
-        NSMutableSet *newSet = [NSMutableSet set];
-        for (id obj in oldSet) {
-            [newSet addObject:[self deepMutableCopy:obj]];
-        }
-        return newSet;
-#if MAKE_MUTABLE_COPIES_OF_NONCOLLECTION_OBJECTS
-    } else if ([source conformsToProtocol:@protocol(NSMutableCopying)]) {
-        // e.g. NSString
-        return [source mutableCopy];
-    } else if ([source conformsToProtocol:@protocol(NSCopying)]) {
-        // e.g. NSNumber
-        return [source copy];
-#endif
-    } else {
-        return source;
-    }
 }
 
 @end

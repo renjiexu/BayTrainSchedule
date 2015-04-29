@@ -8,6 +8,10 @@
 
 #import "AmtrakTrain.h"
 
+@interface AmtrakTrain()
+@property (nonatomic, strong) NSDictionary *staticSchedule;
+@end
+
 @implementation AmtrakTrain
 
 +(instancetype) getInstance {
@@ -20,11 +24,18 @@
 }
 
 -(NSDictionary *)getSchedule:(BOOL)staticOnly {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"amtrak-static" ofType:@"json"];
-    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
-    NSError *error = nil;
-    NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    return [jsonDict objectForKey:@"data"];
+    return [self getStaticSchedule];
+}
+
+-(NSDictionary *)getStaticSchedule {
+    if (self.staticSchedule == nil) {
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"amtrak" ofType:@"json"];
+        NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
+        NSError *error = nil;
+        NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+        self.staticSchedule = [jsonDict objectForKey:@"data"];
+    }
+    return self.staticSchedule;
 }
 
 @end
