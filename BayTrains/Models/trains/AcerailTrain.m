@@ -55,7 +55,12 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:ACERAIL_LIVE_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *transformedSchedule = [self extractLiveScheduleFromLiveResponse:responseObject];
-        [self merge:self.staticSchedule :transformedSchedule];
+        if (transformedSchedule == nil) {
+            self.mergedSchedule = [self.staticSchedule copy];
+        }
+        else {
+            [self merge:self.staticSchedule :transformedSchedule];
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:REFRESH_SCHEDULE object:self];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
