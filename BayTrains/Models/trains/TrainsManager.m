@@ -9,6 +9,7 @@
 #import "TrainsManager.h"
 #import "AmtrakTrain.h"
 #import "AcerailTrain.h"
+#import "CaltrainTrain.h"
 
 @implementation TrainsManager
 
@@ -26,6 +27,7 @@
     NSArray *schedulesArray = [[NSMutableArray alloc] initWithObjects:
                                [[AcerailTrain getInstance] getSchedule:staticOnly],
                                [[AmtrakTrain getInstance] getSchedule:staticOnly],
+                               [[CaltrainTrain getInstance] getSchedule:staticOnly],
                                nil];
     [allTrainsScheduleDict setValue:@"All Trains" forKey:@"name"];
     [allTrainsScheduleDict setValue:schedulesArray forKey:@"children"];
