@@ -68,7 +68,7 @@
 - (void)loadData:(BOOL)staticOnly {
     TrainsManager *trainsManager = [TrainsManager getInstance];
     NSDictionary* allSchedules = [trainsManager getAllTrainSchedules:staticOnly];
-    [super parseJSON:allSchedules];
+    self.schedule = [[ScheduleFactory getInstance] parseJSON:allSchedules];
 }
 
 @end

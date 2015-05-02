@@ -9,6 +9,8 @@
 #import "STTableViewController.h"
 #import "STTableViewCell.h"
 #import "UIColor+HexString.h"
+#import "Schedule.h"
+#import "ScheduleFactory.h"
 
 #define InitSelectedIndex @"0"
 
@@ -19,54 +21,35 @@ typedef enum
 }STTableViewRowAction;
 
 @interface STTableViewController ()
+/*
 {
   NSInteger _selectedCategorySection;
   NSMutableArray *_categories;
   NSMutableDictionary *_structure;
   NSMutableArray* _displayedChildren;
 }
-@property (atomic, assign) NSInteger selectedCategorySection;
-@property (nonatomic, strong) NSMutableArray *categories; // index -> category
-@property (nonatomic, strong) NSMutableDictionary *structure; // whole logic
-@property (nonatomic, strong) NSMutableArray* displayedChildren; // index of categories displayed on screen
+*/
+
 @end
 
 @implementation STTableViewController
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
+    [super viewDidLoad];
     [self reset];
   
-  self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-  self.tableView.dataSource = self;
-  self.tableView.delegate = self;
-  [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-  [self.tableView setBackgroundColor:[UIColor blackColor]];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setBackgroundColor:[UIColor blackColor]];
 
-  [self loadData];
-  [self.tableView reloadData];
+    self.schedule = [[Schedule alloc] init];
+    [self loadData];
+    [self.tableView reloadData];
 }
 
-+ (NSArray *)getTextColors {
-    static NSArray *_textColors;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _textColors = @[
-                    @"#FF5B54",
-                    @"#8A4E77",
-                    @"#36779D",
-                    @"#56B2BD",
-                    @"#ead500",
-                    @"#6ABC8B",
-                    @"#d43e19",
-                    @"#ffa54f",
-                    @"#68DDAB",
-                    @"#666F7E"
-        ];
-    });
-    return _textColors;
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -78,7 +61,7 @@ typedef enum
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.displayedChildren.count;
+    return self.schedule.displayedChildren.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -90,7 +73,7 @@ typedef enum
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSInteger index = [self getCategoryIndexFrom:indexPath.row];
-    STCategory *category = ((STCategory *)[self.categories objectAtIndex:index]);
+    STCategory *category = ((STCategory *)[self.schedule.categories objectAtIndex:index]);
     cell = [self setCell:cell content:category indexRow:indexPath.row];
     return cell;
 }
@@ -114,19 +97,19 @@ typedef enum
   
   if (index == 0 && categoryIndex == 0)
   {
-    currentIndex = _selectedCategorySection;
+    currentIndex = self.schedule.selectedCategorySection;
     
-    _selectedCategorySection = -1;
+    self.schedule.selectedCategorySection = -1;
     
     [self tableViewBased:currentIndex from:UITableViewRowAnimationTop to:UITableViewRowAnimationFade action:STTableViewRowDelete];
     
     
     NSInteger rootIndex = [self getCategoryIndexFrom:1];
     
-    [self.displayedChildren removeAllObjects];
-    [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
+    [self.schedule.displayedChildren removeAllObjects];
+    [self.schedule.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.schedule.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
     
-    movedIndex = [self.displayedChildren indexOfObject:[NSString stringWithFormat:@"%d", (int)rootIndex]];
+    movedIndex = [self.schedule.displayedChildren indexOfObject:[NSString stringWithFormat:@"%d", (int)rootIndex]];
     if (currentIndex != movedIndex) movedIndex = 0;
 
     [self tableViewBased:movedIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationTop action:STTableViewRowInsert];
@@ -134,31 +117,29 @@ typedef enum
   }
   else
   {
-    if (_selectedCategorySection == index)
-    {
-      NSLog(@"%@", ((STCategory *)[self.categories objectAtIndex:[self getCategoryIndexFrom:_selectedCategorySection]]).name);
-      [self.tableView endUpdates];
-      return;
+    if (self.schedule.selectedCategorySection == index) {
+        NSLog(@"%@", ((STCategory *)[self.schedule.categories objectAtIndex:[self getCategoryIndexFrom:self.schedule.selectedCategorySection]]).name);
+        [self.tableView endUpdates];
+        return;
     }
-    else
-    {
-      NSDictionary *categoriesDict =  [self.structure objectForKey:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
+    else {
+      NSDictionary *categoriesDict =  [self.schedule.structure objectForKey:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
       NSArray *forwardCategoryArray = [categoriesDict objectForKey:@"forwardIndex"];
       
-      if (_selectedCategorySection == -1)
+      if (self.schedule.selectedCategorySection == -1)
       {
-        _selectedCategorySection = 1;
+        self.schedule.selectedCategorySection = 1;
         
         currentIndex = index;
         [self tableViewBased:currentIndex from:UITableViewRowAnimationBottom to:UITableViewRowAnimationFade action:STTableViewRowDelete];
         
-        [self.displayedChildren removeAllObjects];
-        [self.displayedChildren addObject:@"0"];
-        [self.displayedChildren addObject:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
+        [self.schedule.displayedChildren removeAllObjects];
+        [self.schedule.displayedChildren addObject:@"0"];
+        [self.schedule.displayedChildren addObject:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
         
-        if (forwardCategoryArray && forwardCategoryArray.count > 0)  [self.displayedChildren addObjectsFromArray:forwardCategoryArray];
+        if (forwardCategoryArray && forwardCategoryArray.count > 0)  [self.schedule.displayedChildren addObjectsFromArray:forwardCategoryArray];
         
-        movedIndex = _selectedCategorySection;
+        movedIndex = self.schedule.selectedCategorySection;
         
         [self tableViewBased:movedIndex from:UITableViewRowAnimationFade to:UITableViewRowAnimationFade action:STTableViewRowInsert];
         
@@ -166,31 +147,31 @@ typedef enum
       else
       {
         NSRange range;
-        currentIndex = _selectedCategorySection;
-        if (index < _selectedCategorySection)
+        currentIndex = self.schedule.selectedCategorySection;
+        if (index < self.schedule.selectedCategorySection)
         {
-          range = NSMakeRange(index, self.displayedChildren.count - index);
-          _selectedCategorySection = index;
+          range = NSMakeRange(index, self.schedule.displayedChildren.count - index);
+          self.schedule.selectedCategorySection = index;
         }
         else
         {
-          range = NSMakeRange(_selectedCategorySection + 1, self.displayedChildren.count - _selectedCategorySection - 1);
-          [indexPathInsert addObject:[self getIndexPath:_selectedCategorySection]];
-          _selectedCategorySection += 1;
+          range = NSMakeRange(self.schedule.selectedCategorySection + 1, self.schedule.displayedChildren.count - self.schedule.selectedCategorySection - 1);
+          [indexPathInsert addObject:[self getIndexPath:self.schedule.selectedCategorySection]];
+          self.schedule.selectedCategorySection += 1;
         }
         
         [self tableview:self.tableView baseIndexPath:[self getIndexPath:currentIndex] fromIndexPath:[self getIndexPath:range.location] animation:UITableViewRowAnimationNone toIndexPath:[self getIndexPath:range.location + range.length - 1] animation:UITableViewRowAnimationNone tableViewAction:STTableViewRowDelete];
         
-        [self.displayedChildren removeObjectsInRange:range];
+        [self.schedule.displayedChildren removeObjectsInRange:range];
         
-        [self.displayedChildren addObject:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
+        [self.schedule.displayedChildren addObject:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
         
         if (forwardCategoryArray && forwardCategoryArray.count > 0)
         {
-          [indexPathInsert addObjectsFromArray:[self indexPathArray:self.displayedChildren.count end:self.displayedChildren.count + forwardCategoryArray.count -1]];
-          [self.displayedChildren addObjectsFromArray:forwardCategoryArray];
+          [indexPathInsert addObjectsFromArray:[self indexPathArray:self.schedule.displayedChildren.count end:self.schedule.displayedChildren.count + forwardCategoryArray.count -1]];
+          [self.schedule.displayedChildren addObjectsFromArray:forwardCategoryArray];
         }
-        movedIndex = _selectedCategorySection;
+        movedIndex = self.schedule.selectedCategorySection;
         [self.tableView insertRowsAtIndexPaths:indexPathInsert withRowAnimation:UITableViewRowAnimationFade];
       }
     }
@@ -198,7 +179,7 @@ typedef enum
   if (movedIndex > -1)
   {
     [self.tableView moveRowAtIndexPath:[self getIndexPath:currentIndex] toIndexPath:[self getIndexPath:movedIndex]];
-    STCategory *cate = ((STCategory *)[self.categories objectAtIndex:[self getCategoryIndexFrom:movedIndex]]);
+    STCategory *cate = ((STCategory *)[self.schedule.categories objectAtIndex:[self getCategoryIndexFrom:movedIndex]]);
     [self setCell:(STTableViewCell *)[self.tableView cellForRowAtIndexPath:[self getIndexPath:currentIndex]] content:cate indexRow:movedIndex];
   }
   
@@ -208,7 +189,7 @@ typedef enum
 
 - (void)tableViewBased:(NSInteger)base from:(UITableViewRowAnimation)from to:(UITableViewRowAnimation)to action:(STTableViewRowAction)action
 {
-  [self tableview:self.tableView baseIndexPath:[self getIndexPath:base] fromIndexPath:[self getIndexPath:0] animation:from toIndexPath:[self getIndexPath:self.displayedChildren.count - 1] animation:to tableViewAction:action];
+  [self tableview:self.tableView baseIndexPath:[self getIndexPath:base] fromIndexPath:[self getIndexPath:0] animation:from toIndexPath:[self getIndexPath:self.schedule.displayedChildren.count - 1] animation:to tableViewAction:action];
 }
 
 - (void)tableview:(UITableView *)tableView baseIndexPath:(NSIndexPath *)baseIndexPath fromIndexPath:(NSIndexPath *)fromIndexPath animation:(UITableViewRowAnimation)baseTofromAnimation toIndexPath:(NSIndexPath *)toIndexPath animation:(UITableViewRowAnimation)baseTotoAnimation tableViewAction:(STTableViewRowAction)action
@@ -236,15 +217,15 @@ typedef enum
 
 - (STTableViewCell *)setCell:(STTableViewCell *)cell content:(STCategory *)category indexRow:(NSInteger)indexRow {
     [cell setContent:category];
-    if (_selectedCategorySection < 0) {
+    if (self.schedule.selectedCategorySection < 0) {
         cell.textLabel.textColor = [UIColor whiteColor];
         [cell.contentView setBackgroundColor:[UIColor colorWithHexString:category.colorHex]];
     }
     else {
-        if(indexRow < _selectedCategorySection) {
+        if(indexRow < self.schedule.selectedCategorySection) {
             cell.textLabel.textColor = [UIColor grayColor];
         }
-        else if (indexRow == _selectedCategorySection) {
+        else if (indexRow == self.schedule.selectedCategorySection) {
             cell.textLabel.textColor = [UIColor whiteColor];
             [cell.contentView setBackgroundColor:[UIColor colorWithHexString:category.colorHex]];
         }
@@ -254,9 +235,9 @@ typedef enum
 
 - (NSInteger) getCategoryIndexFrom:(NSInteger )index
 {
-  if (self.displayedChildren && self.displayedChildren.count > 0 && index >=0 && index < self.displayedChildren.count)
+  if (self.schedule.displayedChildren && self.schedule.displayedChildren.count > 0 && index >=0 && index < self.schedule.displayedChildren.count)
   {
-    return [((NSString *)[self.displayedChildren objectAtIndex:index]) integerValue];
+    return [((NSString *)[self.schedule.displayedChildren objectAtIndex:index]) integerValue];
   }
   return 0;
 }
@@ -278,58 +259,18 @@ typedef enum
 #pragma mark - Load Data Methods
 
 - (void)loadData {
-    [self loadDataFromLocalJSON];
-}
-
-- (void) loadDataFromLocalJSON {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    [self parseJSON:[jsonDict objectForKey:@"data"]];
+    self.schedule = [[ScheduleFactory getInstance] parseJSON:[jsonDict objectForKey:@"data"]];
 }
 
-- (NSInteger)parseJSON:(NSDictionary *)jsonDict {
-    NSMutableArray* backupDisplayedChildren = [self.displayedChildren mutableCopy];
-    [self reset];
-    [self parseJSON:jsonDict backIndex:-1 colorIndex:0];
-    if ([backupDisplayedChildren count] != 0) {
-        self.displayedChildren = backupDisplayedChildren;
-    }
-    else {
-        _selectedCategorySection = -1;
-        [self.displayedChildren addObjectsFromArray:[((NSDictionary *)[self.structure objectForKey:@"0"]) objectForKey:@"forwardIndex"]];
-    }
-    return -1;
-}
 
 - (void)reset {
-    self.categories = [[NSMutableArray alloc] init];
-    self.structure = [[NSMutableDictionary alloc] init];
-    self.displayedChildren = [[NSMutableArray alloc] init];
+    self.schedule = [[Schedule alloc] init];
 }
 
-- (NSInteger)parseJSON:(NSDictionary*)jsonDict backIndex:(NSInteger)backIndex colorIndex:(NSInteger)colorIndex {
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    STCategory *category = [[STCategory alloc] initWithJSON:jsonDict
-                                                           :[[self.class getTextColors] objectAtIndex:colorIndex]];
-    [self.categories addObject:category];
-  
-    NSInteger currentIndex = [self.categories indexOfObject:category];
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    NSMutableArray *jsonArray = [jsonDict objectForKey:@"children"];
-    if (jsonArray && jsonArray.count > 0) {
-        for (NSDictionary *jsonCategoryDict in jsonArray) {
-            colorIndex = (colorIndex + 1) % [[self.class getTextColors] count];
-            [array addObject: [NSString stringWithFormat:@"%d", (int)[self parseJSON:jsonCategoryDict backIndex:currentIndex colorIndex:colorIndex]]];
-        }
-    }
-    [dict setObject:[NSString stringWithFormat:@"%d", (int)backIndex] forKey:@"backIndex"];
-    if (array && array.count > 0) {
-        [dict setObject:array forKey:@"forwardIndex"];
-    }
-    [self.structure setObject:dict forKey:[NSString stringWithFormat:@"%d",(int)currentIndex]];
-    return currentIndex;
-}
+
 
 @end

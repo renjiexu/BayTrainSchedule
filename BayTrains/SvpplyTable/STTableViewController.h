@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "STCategory.h"
+#import "Schedule.h"
+#import "ScheduleFactory.h"
 
 @interface STTableViewController : UITableViewController
 <
@@ -15,8 +17,8 @@
   UITableViewDelegate
 >
 
-- (void)loadData;
+@property (atomic, strong) Schedule *schedule;
 
-- (NSInteger)parseJSON:(NSDictionary *)jsonDict;
+- (void)loadData;
 
 @end

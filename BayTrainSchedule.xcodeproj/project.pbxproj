@@ -26,6 +26,8 @@
 		A3FB75F71AF45874008FFAD1 /* bart.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FB75F61AF45874008FFAD1 /* bart.json */; };
 		A3FB75FA1AF458A1008FFAD1 /* TrainBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75F91AF458A1008FFAD1 /* TrainBase.m */; };
 		A3FB75FD1AF487E5008FFAD1 /* Bart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75FC1AF487E5008FFAD1 /* Bart.m */; };
+		A3FB76031AF56CB0008FFAD1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB76021AF56CB0008FFAD1 /* Schedule.m */; };
+		A3FB76071AF574D6008FFAD1 /* ScheduleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB76061AF574D6008FFAD1 /* ScheduleFactory.m */; };
 		A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */; };
 		A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */; };
 		A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */; };
@@ -79,6 +81,10 @@
 		A3FB75F91AF458A1008FFAD1 /* TrainBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainBase.m; path = Models/trains/TrainBase.m; sourceTree = "<group>"; };
 		A3FB75FB1AF487E5008FFAD1 /* Bart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bart.h; path = Models/trains/Bart.h; sourceTree = "<group>"; };
 		A3FB75FC1AF487E5008FFAD1 /* Bart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bart.m; path = Models/trains/Bart.m; sourceTree = "<group>"; };
+		A3FB76011AF56CB0008FFAD1 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Schedule.h; path = Models/Schedule.h; sourceTree = "<group>"; };
+		A3FB76021AF56CB0008FFAD1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Schedule.m; path = Models/Schedule.m; sourceTree = "<group>"; };
+		A3FB76051AF574D6008FFAD1 /* ScheduleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleFactory.h; path = Models/schedule/ScheduleFactory.h; sourceTree = "<group>"; };
+		A3FB76061AF574D6008FFAD1 /* ScheduleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleFactory.m; path = Models/schedule/ScheduleFactory.m; sourceTree = "<group>"; };
 		A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategory.h; sourceTree = "<group>"; };
 		A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategory.m; sourceTree = "<group>"; };
 		A3FDD7AC1ADE1FD70008E0CD /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewCell.h; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		A3207BC31AE77B9200275096 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A3FB76041AF56DA1008FFAD1 /* schedule */,
 				A3207BC41AE77BA300275096 /* trains */,
 			);
 			name = Models;
@@ -223,6 +230,17 @@
 				A33427001ADE091600B263C0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3FB76041AF56DA1008FFAD1 /* schedule */ = {
+			isa = PBXGroup;
+			children = (
+				A3FB76011AF56CB0008FFAD1 /* Schedule.h */,
+				A3FB76021AF56CB0008FFAD1 /* Schedule.m */,
+				A3FB76051AF574D6008FFAD1 /* ScheduleFactory.h */,
+				A3FB76061AF574D6008FFAD1 /* ScheduleFactory.m */,
+			);
+			name = schedule;
 			sourceTree = "<group>";
 		};
 		A3FDD7A51ADE1FD70008E0CD /* SvpplyTable */ = {
@@ -438,6 +456,8 @@
 				A33426E81ADE091500B263C0 /* AppDelegate.m in Sources */,
 				A33426E51ADE091500B263C0 /* main.m in Sources */,
 				A3E37B981AE8C4F2005F0BE7 /* AmtrakTrain.m in Sources */,
+				A3FB76071AF574D6008FFAD1 /* ScheduleFactory.m in Sources */,
+				A3FB76031AF56CB0008FFAD1 /* Schedule.m in Sources */,
 				A3FDD7B71ADE1FD70008E0CD /* UIColor+HexString.m in Sources */,
 				A33426EB1ADE091600B263C0 /* BayTrains.xcdatamodeld in Sources */,
 				A3FDD7BF1ADE39360008E0CD /* BayTrainViewController.m in Sources */,
