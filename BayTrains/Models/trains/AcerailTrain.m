@@ -13,42 +13,12 @@
 #import "NSObject+Category.h"
 
 
-@interface AcerailTrain()
-@property NSMutableDictionary *staticSchedule;
-@property NSMutableDictionary *mergedSchedule;
-@end
-
 static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/ACERail/TrainStatusService.aspx?service=get_vehicles"; //@"http://localhost:3000/json/live_acerail.json";
 
 @implementation AcerailTrain
 
-+(instancetype) getInstance {
-    static id instance;
-    static dispatch_once_t once;
-    dispatch_once(&once, ^{
-        instance = [[self alloc] init];
-    });
-    return instance;
-}
-
--(NSDictionary *)getSchedule:(BOOL)staticOnly {
-    [self getStaticSchedule];
-    if (!staticOnly) {
-        [self refreshLiveSchedule];
-    }
-    return self.mergedSchedule;
-}
-
 -(NSDictionary *)getStaticSchedule {
-    if (!self.staticSchedule) {
-        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"acerail" ofType:@"json"];
-        NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
-        NSError *error = nil;
-        NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        self.staticSchedule = [jsonDict objectForKey:@"data"];
-        self.mergedSchedule = self.staticSchedule;
-    }
-    return self.staticSchedule;
+    return [super getStaticSchedule:@"acerail"];
 }
 
 -(void)refreshLiveSchedule {
@@ -100,7 +70,7 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
     if (liveSchedule == nil) {
         return staticSchedule;
     }
-    self.mergedSchedule = [self deepMutableCopy:self.staticSchedule];
+    //self.mergedSchedule = [self deepMutableCopy:self.staticSchedule];
     for (NSMutableDictionary *direction in [self.mergedSchedule objectForKey:@"children"]) {
         for (NSMutableDictionary *stop in [direction objectForKey:@"children"]) {
             for (NSMutableDictionary *train in [stop objectForKey:@"children"]) {

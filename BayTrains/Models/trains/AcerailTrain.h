@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "TrainProtocol.h"
+#import "TrainBase.h"
 
-@interface AcerailTrain : NSObject<TrainProtocol>
-
-+(instancetype)getInstance;
+@interface AcerailTrain : TrainBase
 
 @end

@@ -23,6 +23,9 @@
 		A3FB75F01AF0C31F008FFAD1 /* NSObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75EF1AF0C31F008FFAD1 /* NSObject+Category.m */; };
 		A3FB75F21AF0C560008FFAD1 /* caltrain.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FB75F11AF0C560008FFAD1 /* caltrain.json */; };
 		A3FB75F51AF0C9FF008FFAD1 /* CaltrainTrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75F41AF0C9FF008FFAD1 /* CaltrainTrain.m */; };
+		A3FB75F71AF45874008FFAD1 /* bart.json in Resources */ = {isa = PBXBuildFile; fileRef = A3FB75F61AF45874008FFAD1 /* bart.json */; };
+		A3FB75FA1AF458A1008FFAD1 /* TrainBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75F91AF458A1008FFAD1 /* TrainBase.m */; };
+		A3FB75FD1AF487E5008FFAD1 /* Bart.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FB75FC1AF487E5008FFAD1 /* Bart.m */; };
 		A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */; };
 		A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AD1ADE1FD70008E0CD /* STTableViewCell.m */; };
 		A3FDD7B61ADE1FD70008E0CD /* STTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FDD7AF1ADE1FD70008E0CD /* STTableViewController.m */; };
@@ -71,6 +74,11 @@
 		A3FB75F11AF0C560008FFAD1 /* caltrain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = caltrain.json; sourceTree = "<group>"; };
 		A3FB75F31AF0C9FF008FFAD1 /* CaltrainTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaltrainTrain.h; path = Models/trains/CaltrainTrain.h; sourceTree = "<group>"; };
 		A3FB75F41AF0C9FF008FFAD1 /* CaltrainTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaltrainTrain.m; path = Models/trains/CaltrainTrain.m; sourceTree = "<group>"; };
+		A3FB75F61AF45874008FFAD1 /* bart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bart.json; sourceTree = "<group>"; };
+		A3FB75F81AF458A1008FFAD1 /* TrainBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainBase.h; path = Models/trains/TrainBase.h; sourceTree = "<group>"; };
+		A3FB75F91AF458A1008FFAD1 /* TrainBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainBase.m; path = Models/trains/TrainBase.m; sourceTree = "<group>"; };
+		A3FB75FB1AF487E5008FFAD1 /* Bart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bart.h; path = Models/trains/Bart.h; sourceTree = "<group>"; };
+		A3FB75FC1AF487E5008FFAD1 /* Bart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bart.m; path = Models/trains/Bart.m; sourceTree = "<group>"; };
 		A3FDD7AA1ADE1FD70008E0CD /* STCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCategory.h; sourceTree = "<group>"; };
 		A3FDD7AB1ADE1FD70008E0CD /* STCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCategory.m; sourceTree = "<group>"; };
 		A3FDD7AC1ADE1FD70008E0CD /* STTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTableViewCell.h; sourceTree = "<group>"; };
@@ -132,6 +140,10 @@
 				A3C638281AEDB2F900267DBD /* TrainProtocol.h */,
 				A3FB75F31AF0C9FF008FFAD1 /* CaltrainTrain.h */,
 				A3FB75F41AF0C9FF008FFAD1 /* CaltrainTrain.m */,
+				A3FB75F81AF458A1008FFAD1 /* TrainBase.h */,
+				A3FB75F91AF458A1008FFAD1 /* TrainBase.m */,
+				A3FB75FB1AF487E5008FFAD1 /* Bart.h */,
+				A3FB75FC1AF487E5008FFAD1 /* Bart.m */,
 			);
 			name = trains;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 				A3DEFF091AE4835E00FE5564 /* acerail.json */,
 				A3E37B991AE8CD53005F0BE7 /* amtrak.json */,
 				A3FB75F11AF0C560008FFAD1 /* caltrain.json */,
+				A3FB75F61AF45874008FFAD1 /* bart.json */,
 			);
 			name = Resources;
 			path = SvpplyTable/Resources;
@@ -367,6 +380,7 @@
 				A3E37B9A1AE8CD53005F0BE7 /* amtrak.json in Resources */,
 				A3DEFF0A1AE4835E00FE5564 /* acerail.json in Resources */,
 				A3FB75F21AF0C560008FFAD1 /* caltrain.json in Resources */,
+				A3FB75F71AF45874008FFAD1 /* bart.json in Resources */,
 				A33426F61ADE091600B263C0 /* LaunchScreen.xib in Resources */,
 				A33426F31ADE091600B263C0 /* Images.xcassets in Resources */,
 			);
@@ -429,9 +443,11 @@
 				A3FDD7BF1ADE39360008E0CD /* BayTrainViewController.m in Sources */,
 				A3FDD7B41ADE1FD70008E0CD /* STCategory.m in Sources */,
 				A3FDD7B51ADE1FD70008E0CD /* STTableViewCell.m in Sources */,
+				A3FB75FD1AF487E5008FFAD1 /* Bart.m in Sources */,
 				A3207BC71AE77C0600275096 /* AcerailTrain.m in Sources */,
 				A3E37B9D1AE8CE42005F0BE7 /* TrainsManager.m in Sources */,
 				A3FB75F01AF0C31F008FFAD1 /* NSObject+Category.m in Sources */,
+				A3FB75FA1AF458A1008FFAD1 /* TrainBase.m in Sources */,
 				A3C6382A1AEDB63A00267DBD /* ConstantVars.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

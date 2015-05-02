@@ -10,6 +10,15 @@
 #import "AmtrakTrain.h"
 #import "AcerailTrain.h"
 #import "CaltrainTrain.h"
+#import "Bart.h"
+
+@interface TrainsManager()
+@property AcerailTrain *acerail;
+@property AmtrakTrain *amtrak;
+@property CaltrainTrain *caltrain;
+@property Bart *bart;
+@end
+
 
 @implementation TrainsManager
 
@@ -18,6 +27,10 @@
     static id sharedInstance;
     dispatch_once(&once, ^{
         sharedInstance = [[self alloc] init];
+        ((TrainsManager *)sharedInstance).acerail = [[AcerailTrain alloc] init];
+        ((TrainsManager *)sharedInstance).amtrak = [[AmtrakTrain alloc] init];
+        ((TrainsManager *)sharedInstance).caltrain = [[CaltrainTrain alloc] init];
+        ((TrainsManager *)sharedInstance).bart = [[Bart alloc] init];
     });
     return sharedInstance;
 }
@@ -25,9 +38,10 @@
 -(NSDictionary *)getAllTrainSchedules:(BOOL)staticOnly {
     NSDictionary *allTrainsScheduleDict = [[NSMutableDictionary alloc] init];
     NSArray *schedulesArray = [[NSMutableArray alloc] initWithObjects:
-                               [[AcerailTrain getInstance] getSchedule:staticOnly],
-                               [[AmtrakTrain getInstance] getSchedule:staticOnly],
-                               [[CaltrainTrain getInstance] getSchedule:staticOnly],
+                               [self.acerail getSchedule:staticOnly],
+                               [self.amtrak getSchedule:staticOnly],
+                               [self.caltrain getSchedule:staticOnly],
+                               [self.bart getSchedule:staticOnly],
                                nil];
     [allTrainsScheduleDict setValue:@"All Trains" forKey:@"name"];
     [allTrainsScheduleDict setValue:schedulesArray forKey:@"children"];

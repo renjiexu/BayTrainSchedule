@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TrainProtocol.h"
+#import "TrainBase.h"
 
-@interface CaltrainTrain : NSObject<TrainProtocol>
-
-+(instancetype)getInstance;
+@interface CaltrainTrain : TrainBase
 
 @end
