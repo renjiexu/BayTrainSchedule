@@ -29,8 +29,8 @@
         NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
         NSError *error = nil;
         NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        self.staticSchedule = [self deepMutableCopy:[jsonDict objectForKey:@"data"]];
-        self.mergedSchedule = [self deepMutableCopy:self.staticSchedule];
+        self.staticSchedule = [jsonDict objectForKey:@"data"];
+        self.mergedSchedule = self.staticSchedule;
     }
     return self.staticSchedule;
 }

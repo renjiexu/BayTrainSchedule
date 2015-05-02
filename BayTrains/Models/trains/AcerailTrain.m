@@ -70,7 +70,8 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
     if (liveSchedule == nil) {
         return staticSchedule;
     }
-    //self.mergedSchedule = [self deepMutableCopy:self.staticSchedule];
+    //TODO: is there a way to avoid pre-copying???
+    self.mergedSchedule = [self deepMutableCopy:self.staticSchedule];
     for (NSMutableDictionary *direction in [self.mergedSchedule objectForKey:@"children"]) {
         for (NSMutableDictionary *stop in [direction objectForKey:@"children"]) {
             for (NSMutableDictionary *train in [stop objectForKey:@"children"]) {
