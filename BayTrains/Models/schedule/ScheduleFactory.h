@@ -13,6 +13,6 @@
 
 +(instancetype)getInstance;
 
--(Schedule *)parseJSON:(NSDictionary *)jsonDict;
+-(Schedule *)buildScheduleByDictionaryData:(NSDictionary *)jsonDict;
 
 @end

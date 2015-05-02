@@ -20,7 +20,7 @@
     return sharedInstance;
 }
 
-- (Schedule *)parseJSON:(NSDictionary *)jsonDict {
+- (Schedule *)buildScheduleByDictionaryData:(NSDictionary *)jsonDict {
     Schedule *schedule = [[Schedule alloc] init];
     
     NSMutableArray* backupDisplayedChildren = [schedule.displayedChildren mutableCopy];
@@ -39,9 +39,8 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     STCategory *category = [[STCategory alloc] initWithJSON:jsonDict
                                                            :[[self.class getTextColors] objectAtIndex:colorIndex]];
+    NSInteger currentIndex = [schedule.categories count];
     [schedule.categories addObject:category];
-    
-    NSInteger currentIndex = [schedule.categories indexOfObject:category];
     NSMutableArray *array = [[NSMutableArray alloc] init];
     NSMutableArray *jsonArray = [jsonDict objectForKey:@"children"];
     if (jsonArray && jsonArray.count > 0) {

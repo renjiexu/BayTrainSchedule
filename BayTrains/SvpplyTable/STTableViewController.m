@@ -194,8 +194,7 @@ typedef enum
 
 - (void)tableview:(UITableView *)tableView baseIndexPath:(NSIndexPath *)baseIndexPath fromIndexPath:(NSIndexPath *)fromIndexPath animation:(UITableViewRowAnimation)baseTofromAnimation toIndexPath:(NSIndexPath *)toIndexPath animation:(UITableViewRowAnimation)baseTotoAnimation tableViewAction:(STTableViewRowAction)action
 {
-  NSMutableArray *array = [[NSMutableArray alloc]init];
-  array = [self indexPathArray:fromIndexPath.row end:baseIndexPath.row - 1];
+  NSMutableArray *array = [self indexPathArray:fromIndexPath.row end:baseIndexPath.row - 1];
   [self tableView:tableView action:action indexPathArray:array animation:baseTofromAnimation];
   array = [self indexPathArray:baseIndexPath.row + 1 end:toIndexPath.row];
   [self tableView:tableView action:action indexPathArray:array animation:baseTotoAnimation];
@@ -263,7 +262,7 @@ typedef enum
     NSData *jsonData = [[NSData alloc] initWithContentsOfFile:jsonPath];
     NSError *error = nil;
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    self.schedule = [[ScheduleFactory getInstance] parseJSON:[jsonDict objectForKey:@"data"]];
+    self.schedule = [[ScheduleFactory getInstance] buildScheduleByDictionaryData:[jsonDict objectForKey:@"data"]];
 }
 
 
