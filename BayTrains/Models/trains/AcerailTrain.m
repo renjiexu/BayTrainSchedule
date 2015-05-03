@@ -26,7 +26,7 @@ static NSString * const ACERAIL_LIVE_URL = @"http://www.acerail.com/CMSWebParts/
     [manager GET:ACERAIL_LIVE_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *transformedSchedule = [self extractLiveScheduleFromLiveResponse:responseObject];
         if (transformedSchedule == nil) {
-            self.mergedSchedule = [self.staticSchedule copy];
+            self.mergedSchedule = self.staticSchedule;
         }
         else {
             [self merge:self.staticSchedule :transformedSchedule];

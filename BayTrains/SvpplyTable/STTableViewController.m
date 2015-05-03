@@ -37,7 +37,6 @@ typedef enum
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self reset];
   
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.dataSource = self;
@@ -264,12 +263,5 @@ typedef enum
     NSDictionary * jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
     self.schedule = [[ScheduleFactory getInstance] buildScheduleByDictionaryData:[jsonDict objectForKey:@"data"]];
 }
-
-
-- (void)reset {
-    self.schedule = [[Schedule alloc] init];
-}
-
-
 
 @end

@@ -68,7 +68,12 @@
 - (void)loadData:(BOOL)staticOnly {
     TrainsManager *trainsManager = [TrainsManager getInstance];
     NSDictionary* allSchedules = [trainsManager getAllTrainSchedules:staticOnly];
-    self.schedule = [[ScheduleFactory getInstance] buildScheduleByDictionaryData:allSchedules];
+    Schedule *newSchedule = [[ScheduleFactory getInstance] buildScheduleByDictionaryData:allSchedules];
+    if (self.schedule.selectedCategorySection != -1) {
+        newSchedule.selectedCategorySection = self.schedule.selectedCategorySection;
+        newSchedule.displayedChildren = self.schedule.displayedChildren;
+    }
+    self.schedule = newSchedule;
 }
 
 @end
