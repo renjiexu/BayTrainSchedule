@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Schedule.h"
+#import "Mixpanel.h"
 
 @interface ScheduleFactory : NSObject
 

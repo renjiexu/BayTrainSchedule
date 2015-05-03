@@ -9,3 +9,5 @@
 #import <Foundation/Foundation.h>
 
 #define REFRESH_SCHEDULE @"REFRESH_SCHEDULE"
+
+#define MIXPANEL_TOKEN @"22f1afa4b023bfee122429fd9fa50628"

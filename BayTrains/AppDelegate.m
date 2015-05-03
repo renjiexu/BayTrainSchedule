@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Mixpanel.h"
+#import "ConstantVars.h"
 
 @interface AppDelegate ()
 
@@ -17,16 +19,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    /*
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel identify:mixpanel.distinctId];
     
-    self.window.rootViewController = [[STTableViewController alloc] init];
+    // Tell iOS you want  your app to receive push
+    [[UIApplication sharedApplication] registerUserNotificationSettings:
+        [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil]];
+    [application registerForRemoteNotifications];
     
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    */
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken :(NSData *)deviceToken
+{
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel.people addPushDeviceToken:deviceToken];
+}
+
+// Delegation methods
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    NSLog(@"Error in registration. Error: %@", err);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -37,6 +51,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel track:@"Active Time"];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -45,6 +61,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel timeEvent:@"Active Time"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

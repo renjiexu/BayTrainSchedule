@@ -20,14 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Mixpanel (2.7.3):
+    - Mixpanel/MPCategoryHelpers (= 2.7.3)
+  - Mixpanel/MPCategoryHelpers (2.7.3)
   - MJRefresh (1.4.5)
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.3)
+  - Mixpanel
   - MJRefresh (= 1.4.5)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Mixpanel: 1d387d76800e07e953958c62c97fea27f13632dd
   MJRefresh: 4b24394e577ea399fbc926e5b6072317aae2c152
 
 COCOAPODS: 0.36.3

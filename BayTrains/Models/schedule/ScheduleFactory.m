@@ -22,7 +22,6 @@
 
 - (Schedule *)buildScheduleByDictionaryData:(NSDictionary *)jsonDict {
     Schedule *schedule = [[Schedule alloc] init];
-    
     NSMutableArray* backupDisplayedChildren = [schedule.displayedChildren mutableCopy];
     [self parseJSON:schedule :jsonDict backIndex:-1 colorIndex:0];
     if ([backupDisplayedChildren count] != 0) {
