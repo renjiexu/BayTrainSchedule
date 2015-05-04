@@ -51,7 +51,7 @@
 		8E1EDFED16366352B1C0B5B8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A3207BC51AE77C0600275096 /* AcerailTrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcerailTrain.h; path = Models/trains/AcerailTrain.h; sourceTree = "<group>"; };
 		A3207BC61AE77C0600275096 /* AcerailTrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcerailTrain.m; path = Models/trains/AcerailTrain.m; sourceTree = "<group>"; };
-		A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayTrainSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33426DF1ADE091500B263C0 /* BayTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BayTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33426E31ADE091500B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33426E41ADE091500B263C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A33426E61ADE091500B263C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		A33426F01ADE091600B263C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A33426F21ADE091600B263C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A33426F51ADE091600B263C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainScheduleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33426FB1ADE091600B263C0 /* BayTrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayTrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33427001ADE091600B263C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33427011ADE091600B263C0 /* BayTrainScheduleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BayTrainScheduleTests.m; sourceTree = "<group>"; };
 		A3C638281AEDB2F900267DBD /* TrainProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainProtocol.h; path = Models/trains/TrainProtocol.h; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		A33426E01ADE091500B263C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */,
-				A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */,
+				A33426DF1ADE091500B263C0 /* BayTrain.app */,
+				A33426FB1ADE091600B263C0 /* BayTrainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,7 +191,6 @@
 				A3207BC31AE77B9200275096 /* Models */,
 				A32F8F951AE0B76B0027142D /* Utils */,
 				A3FDD7BC1ADE24AE0008E0CD /* Libraries */,
-				A3FDD7BB1ADE24A20008E0CD /* Views */,
 				A3FDD7B91ADE24940008E0CD /* Controllers */,
 				A3FDD7B81ADE247F0008E0CD /* Application */,
 				A3FDD7A61ADE1FD70008E0CD /* Resources */,
@@ -288,13 +287,6 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		A3FDD7BB1ADE24A20008E0CD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		A3FDD7BC1ADE24AE0008E0CD /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,9 +306,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A33426DE1ADE091500B263C0 /* BayTrainSchedule */ = {
+		A33426DE1ADE091500B263C0 /* BayTrain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainSchedule" */;
+			buildConfigurationList = A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrain" */;
 			buildPhases = (
 				6668A7C852EC0AB57A1C9CD4 /* Check Pods Manifest.lock */,
 				A33426DB1ADE091500B263C0 /* Sources */,
@@ -328,14 +320,14 @@
 			);
 			dependencies = (
 			);
-			name = BayTrainSchedule;
+			name = BayTrain;
 			productName = BayTrains;
-			productReference = A33426DF1ADE091500B263C0 /* BayTrainSchedule.app */;
+			productReference = A33426DF1ADE091500B263C0 /* BayTrain.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A33426FA1ADE091600B263C0 /* BayTrainScheduleTests */ = {
+		A33426FA1ADE091600B263C0 /* BayTrainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainScheduleTests" */;
+			buildConfigurationList = A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainTests" */;
 			buildPhases = (
 				A33426F71ADE091600B263C0 /* Sources */,
 				A33426F81ADE091600B263C0 /* Frameworks */,
@@ -346,9 +338,9 @@
 			dependencies = (
 				A33426FD1ADE091600B263C0 /* PBXTargetDependency */,
 			);
-			name = BayTrainScheduleTests;
+			name = BayTrainTests;
 			productName = BayTrainsTests;
-			productReference = A33426FB1ADE091600B263C0 /* BayTrainScheduleTests.xctest */;
+			productReference = A33426FB1ADE091600B263C0 /* BayTrainTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -370,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrainSchedule" */;
+			buildConfigurationList = A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrain" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -383,8 +375,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A33426DE1ADE091500B263C0 /* BayTrainSchedule */,
-				A33426FA1ADE091600B263C0 /* BayTrainScheduleTests */,
+				A33426DE1ADE091500B263C0 /* BayTrain */,
+				A33426FA1ADE091600B263C0 /* BayTrainTests */,
 			);
 		};
 /* End PBXProject section */
@@ -485,7 +477,7 @@
 /* Begin PBXTargetDependency section */
 		A33426FD1ADE091600B263C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A33426DE1ADE091500B263C0 /* BayTrainSchedule */;
+			target = A33426DE1ADE091500B263C0 /* BayTrain */;
 			targetProxy = A33426FC1ADE091600B263C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -599,7 +591,7 @@
 				);
 				INFOPLIST_FILE = BayTrains/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BayTrainSchedule;
+				PRODUCT_NAME = BayTrain;
 			};
 			name = Debug;
 		};
@@ -616,7 +608,7 @@
 				);
 				INFOPLIST_FILE = BayTrains/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = BayTrainSchedule;
+				PRODUCT_NAME = BayTrain;
 			};
 			name = Release;
 		};
@@ -634,7 +626,7 @@
 				);
 				INFOPLIST_FILE = BayTrainsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BayTrainScheduleTests;
+				PRODUCT_NAME = BayTrainTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrainSchedule.app/BayTrainSchedule";
 			};
 			name = Debug;
@@ -649,7 +641,7 @@
 				);
 				INFOPLIST_FILE = BayTrainsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = BayTrainScheduleTests;
+				PRODUCT_NAME = BayTrainTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BayTrainSchedule.app/BayTrainSchedule";
 			};
 			name = Release;
@@ -657,7 +649,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrainSchedule" */ = {
+		A33426DA1ADE091500B263C0 /* Build configuration list for PBXProject "BayTrain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A33427031ADE091600B263C0 /* Debug */,
@@ -666,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainSchedule" */ = {
+		A33427051ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A33427061ADE091600B263C0 /* Debug */,
@@ -675,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainScheduleTests" */ = {
+		A33427081ADE091600B263C0 /* Build configuration list for PBXNativeTarget "BayTrainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A33427091ADE091600B263C0 /* Debug */,

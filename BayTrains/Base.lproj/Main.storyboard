@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--BayTrainSchedule-->
+        <!--BayTrain-->
         <scene sceneID="uW8-gU-sOx">
             <objects>
                 <tableViewController id="CCM-Iy-FrX" customClass="BayTrainViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="CCM-Iy-FrX" id="zeQ-oN-QTT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BayTrainSchedule" id="w9b-90-9C5"/>
+                    <navigationItem key="navigationItem" title="BayTrain" id="w9b-90-9C5"/>
                     <connections>
                         <outlet property="tableView" destination="Bz5-5Y-LFi" id="816-6Z-atH"/>
                     </connections>

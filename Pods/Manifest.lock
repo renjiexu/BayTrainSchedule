@@ -27,7 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.3)
-  - Mixpanel
+  - Mixpanel (= 2.7.3)
   - MJRefresh (= 1.4.5)
 
 SPEC CHECKSUMS:
