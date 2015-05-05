@@ -19,6 +19,9 @@
         self.name = [jsonDict objectForKey:@"name"];
         self.URLString = [jsonDict objectForKey:@"url"];
         self.colorHex = textColor;
+        if ([jsonDict objectForKey:@"colorHex"] != nil) {
+            self.colorHex = [jsonDict objectForKey:@"colorHex"];
+        }
         self.trainNo = [jsonDict objectForKey:@"trainNo"];
         self.stopID = [jsonDict objectForKey:@"stopID"];
     }
