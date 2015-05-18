@@ -21,14 +21,6 @@ typedef enum
 }STTableViewRowAction;
 
 @interface STTableViewController ()
-/*
-{
-  NSInteger _selectedCategorySection;
-  NSMutableArray *_categories;
-  NSMutableDictionary *_structure;
-  NSMutableArray* _displayedChildren;
-}
-*/
 
 @end
 
@@ -124,7 +116,12 @@ typedef enum
     else {
       NSDictionary *categoriesDict =  [self.schedule.structure objectForKey:[NSString stringWithFormat:@"%d", (int)categoryIndex]];
       NSArray *forwardCategoryArray = [categoriesDict objectForKey:@"forwardIndex"];
-      
+        if (!forwardCategoryArray || forwardCategoryArray.count == 0) {
+            NSLog(@"leaf, no more click");
+            [self.tableView endUpdates];
+            return;
+        }
+        
       if (self.schedule.selectedCategorySection == -1)
       {
         self.schedule.selectedCategorySection = 1;
